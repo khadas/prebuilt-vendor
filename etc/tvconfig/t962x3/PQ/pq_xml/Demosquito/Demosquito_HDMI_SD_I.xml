@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Form name="Demosquito_HDMI" platform="txlx" commands="">
+<Form name="Demosquito_HDMI_SD_I" platform="txlx" commands="">
 <Group num="0" val="0">
 <Page tab_title="" layout="30x4">
 <Control ui_type="checkbox" name="reg_dnr_luma_mode" range="0~1" addr="0x2d0a" mask="28:28" dst="U" desc="usigned, default = 0,ycbcr2luma mode selection" default="0" value="0" cmd="common:2,0xff900000"/>
@@ -23,9 +23,9 @@
 <Control ui_type="slider" name="reg_dnr_fedgeflg_df" range="0~3" addr="0x2d60" mask="11:10" dst="U" desc="reg_dnr_fedgeflg_df, user defined edge flag when reg_dnr_fedgeflg_en = 0" default="3" value="3" cmd="common:2,0xff900000"/>
 <Control ui_type="checkbox" name="reg_dnr_dm_en" range="0~1" addr="0x2d60" mask="9:9" dst="U" desc="reg_dnr_dm_en, 1 to enable de-mosquito unit" default="1" value="1" cmd="common:2,0xff900000"/>
 <Control ui_type="checkbox" name="reg_dnr_dm_chrmen" range="0~1" addr="0x2d60" mask="8:8" dst="U" desc="reg_dnr_dm_chrmen, 1 to enable chrome processing for de-mosquito" default="1" value="1" cmd="common:2,0xff900000"/>
-<Control ui_type="slider" name="reg_dnr_dm_level" range="0~3" addr="0x2d60" mask="7:6" dst="U" desc="reg_dnr_dm_level, de-mosquito level" default="3" value="3" cmd="common:2,0xff900000"/>
-<Control ui_type="slider" name="reg_dnr_dm_leveldw0" range="0~3" addr="0x2d60" mask="5:4" dst="U" desc="reg_dnr_dm_leveldw0 , level down when gbs is small" default="0" value="0" cmd="common:2,0xff900000"/>
-<Control ui_type="slider" name="reg_dnr_dm_leveldw1" range="0~3" addr="0x2d60" mask="3:2" dst="U" desc="reg_dnr_dm_leveldw1 , level down for flat blocks" default="3" value="3" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_dnr_dm_level" range="0~3" addr="0x2d60" mask="7:6" dst="U" desc="reg_dnr_dm_level, de-mosquito level" default="2" value="2" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_dnr_dm_leveldw0" range="0~3" addr="0x2d60" mask="5:4" dst="U" desc="reg_dnr_dm_leveldw0 , level down when gbs is small" default="1" value="1" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_dnr_dm_leveldw1" range="0~3" addr="0x2d60" mask="3:2" dst="U" desc="reg_dnr_dm_leveldw1 , level down for flat blocks" default="1" value="1" cmd="common:2,0xff900000"/>
 <Control ui_type="slider" name="reg_dnr_dm_gbsthd" range="0~3" addr="0x2d60" mask="1:0" dst="U" desc="reg_dnr_dm_gbsthd, small/large threshold for gbs" default="2" value="2" cmd="common:2,0xff900000"/>
 <Control ui_type="checkbox" name="reg_dnr_dm_defalpen" range="0~1" addr="0x2d61" mask="24:24" dst="U" desc="reg_dnr_dm_defalpen, 1 to enable user defined alpha for DM/NR blend" default="0" value="0" cmd="common:2,0xff900000"/>
 <Control ui_type="slider" name="reg_dnr_dm_defalp" range="0~255" addr="0x2d61" mask="23:16" dst="U" desc="reg_dnr_dm_defalp, user defined alpha for DM/NR blend" default="0" value="0" cmd="common:2,0xff900000"/>
@@ -71,11 +71,11 @@
 <Control ui_type="checkbox" name="reg_dnr_dm_difnormen" range="0~1" addr="0x2d6c" mask="1:1" dst="U" desc="reg_dnr_dm_difnormen , enable pixel dif normalization for dm filter" default="1" value="1" cmd="common:2,0xff900000"/>
 <Control ui_type="checkbox" name="reg_dnr_dm_difupden" range="0~1" addr="0x2d6c" mask="0:0" dst="U" desc="reg_dnr_dm_difupden , enable block dif update using max of left,cur,right difs" default="0" value="0" cmd="common:2,0xff900000"/>
 <Control ui_type="slider" name="reg_dnr_dm_sdiflut0" range="0~31" addr="0x2d6d" mask="20:16" dst="U" desc="reg_dnr_dm_sdiflut0,  normally 0-16" default="16" value="16" cmd="common:2,0xff900000"/>
-<Control ui_type="slider" name="reg_dnr_dm_sdiflut1" range="0~31" addr="0x2d6d" mask="12:8" dst="U" desc="reg_dnr_dm_sdiflut1" default="16" value="16" cmd="common:2,0xff900000"/>
-<Control ui_type="slider" name="reg_dnr_dm_sdiflut2" range="0~31" addr="0x2d6d" mask="4:0" dst="U" desc="reg_dnr_dm_sdiflut2" default="15" value="15" cmd="common:2,0xff900000"/>
-<Control ui_type="slider" name="reg_dnr_dm_sdiflut3" range="0~31" addr="0x2d6e" mask="20:16" dst="U" desc="reg_dnr_dm_sdiflut3" default="15" value="15" cmd="common:2,0xff900000"/>
-<Control ui_type="slider" name="reg_dnr_dm_sdiflut4" range="0~31" addr="0x2d6e" mask="12:8" dst="U" desc="reg_dnr_dm_sdiflut4" default="14" value="14" cmd="common:2,0xff900000"/>
-<Control ui_type="slider" name="reg_dnr_dm_sdiflut5" range="0~31" addr="0x2d6e" mask="4:0" dst="U" desc="reg_dnr_dm_sdiflut5" default="13" value="13" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_dnr_dm_sdiflut1" range="0~31" addr="0x2d6d" mask="12:8" dst="U" desc="reg_dnr_dm_sdiflut1" default="15" value="15" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_dnr_dm_sdiflut2" range="0~31" addr="0x2d6d" mask="4:0" dst="U" desc="reg_dnr_dm_sdiflut2" default="14" value="14" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_dnr_dm_sdiflut3" range="0~31" addr="0x2d6e" mask="20:16" dst="U" desc="reg_dnr_dm_sdiflut3" default="13" value="13" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_dnr_dm_sdiflut4" range="0~31" addr="0x2d6e" mask="12:8" dst="U" desc="reg_dnr_dm_sdiflut4" default="12" value="12" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_dnr_dm_sdiflut5" range="0~31" addr="0x2d6e" mask="4:0" dst="U" desc="reg_dnr_dm_sdiflut5" default="11" value="11" cmd="common:2,0xff900000"/>
 <Control ui_type="slider" name="reg_dnr_dm_sdiflut6" range="0~31" addr="0x2d6f" mask="20:16" dst="U" desc="reg_dnr_dm_sdiflut6" default="7" value="7" cmd="common:2,0xff900000"/>
 <Control ui_type="slider" name="reg_dnr_dm_sdiflut7" range="0~31" addr="0x2d6f" mask="12:8" dst="U" desc="reg_dnr_dm_sdiflut7" default="3" value="3" cmd="common:2,0xff900000"/>
 <Control ui_type="slider" name="reg_dnr_dm_sdiflut8" range="0~31" addr="0x2d6f" mask="4:0" dst="U" desc="reg_dnr_dm_sdiflut8" default="0" value="0" cmd="common:2,0xff900000"/>
@@ -95,8 +95,8 @@
 <Control ui_type="slider" name="reg_dnr_dm_dif2normlut4" range="0~31" addr="0x2d74" mask="12:8" dst="U" desc="reg_dnr_dm_dif2normlut4" default="4" value="4" cmd="common:2,0xff900000"/>
 <Control ui_type="slider" name="reg_dnr_dm_dif2normlut5" range="0~31" addr="0x2d74" mask="4:0" dst="U" desc="reg_dnr_dm_dif2normlut5" default="3" value="3" cmd="common:2,0xff900000"/>
 <Control ui_type="slider" name="reg_dnr_dm_dif2normlut6" range="0~31" addr="0x2d75" mask="20:16" dst="U" desc="reg_dnr_dm_dif2normlut6" default="2" value="2" cmd="common:2,0xff900000"/>
-<Control ui_type="slider" name="reg_dnr_dm_dif2normlut7" range="0~31" addr="0x2d75" mask="12:8" dst="U" desc="reg_dnr_dm_dif2normlut7" default="1" value="1" cmd="common:2,0xff900000"/>
-<Control ui_type="slider" name="reg_dnr_dm_dif2normlut8" range="0~31" addr="0x2d75" mask="4:0" dst="U" desc="reg_dnr_dm_dif2normlut8" default="1" value="1" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_dnr_dm_dif2normlut7" range="0~31" addr="0x2d75" mask="12:8" dst="U" desc="reg_dnr_dm_dif2normlut7" default="2" value="2" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_dnr_dm_dif2normlut8" range="0~31" addr="0x2d75" mask="4:0" dst="U" desc="reg_dnr_dm_dif2normlut8" default="2" value="2" cmd="common:2,0xff900000"/>
 <Control ui_type="slider" name="reg_gms_stat_thd0" range="0~255" addr="0x2d76" mask="15:8" dst="U" desc="reg_gms_stat_thd0" default="0" value="0" cmd="common:2,0xff900000"/>
 <Control ui_type="slider" name="reg_gms_stat_thd1" range="0~255" addr="0x2d76" mask="7:0" dst="U" desc="reg_gms_stat_thd1" default="128" value="128" cmd="common:2,0xff900000"/>
 <Control ui_type="slider" name="reg_dnr_dm_alpedgegain0" range="0~255" addr="0x2d79" mask="31:24" dst="U" desc="unsigned, default = 8, edge based gain for alpha, normalized 16 as 1" default="8" value="8" cmd="common:2,0xff900000"/>
