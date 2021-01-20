@@ -16,10 +16,6 @@
 <Control type="field" tablename="NR_MPEG_SD_P" tableid="0" port="10," sig="1025,1026,1035,1052,1056,1058,1060,1075,1077,1100,1101," trans="0,1,"/>
 <Control type="field" tablename="NR_HDMI_4K" tableid="0" port="5,6,7,8," sig="1093,1094," trans="0,1," />
 <Control type="field" tablename="NR_MPEG_4K" tableid="0" port="10," sig="1093,1094," trans="0,1," />
-<Control type="field" tablename="NR_HDR10" tableid="0" port="5,6,7,8,10," sig="2059," trans="0,1,"/>
-<Control type="field" tablename="NR_HDR10Plus" tableid="0" port="5,6,7,8,10," sig="2060," trans="0,1,"/>
-<Control type="field" tablename="NR_HLG" tableid="0" port="5,6,7,8,10," sig="2061," trans="0,1,"/>
-<Control type="field" tablename="NR_DolbyVision" tableid="0" port="5,6,7,8,10," sig="2062," trans="0,1,"/>
 <Control type="port" name="TVIN_PORT_TV" value="0"/>
 <Control type="port" name="TVIN_PORT_AV1" value="1"/>
 <Control type="port" name="TVIN_PORT_AV2" value="2"/>
@@ -125,10 +121,6 @@
 <Control type="sig" name="TVIN_SIG_FMT_CAMERA_1920X1080P_30Hz" value="2056"/>
 <Control type="sig" name="TVIN_SIG_FMT_CAMERA_1280X720P_30Hz" value="2057"/>
 <Control type="sig" name="TVIN_SIG_FMT_MAX" value="2058"/>
-<Control type="sig" name="TVIN_SIG_FMT_HDR10" value="2059"/>
-<Control type="sig" name="TVIN_SIG_FMT_HDR10Plus" value="2060"/>
-<Control type="sig" name="TVIN_SIG_FMT_HLG" value="2061"/>
-<Control type="sig" name="TVIN_SIG_FMT_DolbyVision" value="2062"/>
 <Control type="sig" name="TVIN_SIG_FMT_NULL0" value="3"/>
 <Control type="sig" name="TVIN_SIG_FMT_NULL1" value="4"/>
 <Control type="sig" name="TVIN_SIG_FMT_NULL2" value="5"/>
