@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<audio_effects_conf version="2.0" xmlns="http://schemas.android.com/audio/audio_effects_conf/v2_0">
+    <libraries>
+        <library name="ms12v2dapwrapper" path="libms12v2dapwrapper.so"/>
+    </libraries>
+    <effects>
+        <effect name="ms12v2dapwrapper" library="ms12v2dapwrapper" uuid="86cafba6-3ff3-485d-b8df-0de96b34b272"/>
+    </effects>
+</audio_effects_conf>
