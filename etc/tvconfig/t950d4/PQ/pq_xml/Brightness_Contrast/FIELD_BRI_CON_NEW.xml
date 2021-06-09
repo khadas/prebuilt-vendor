@@ -3,7 +3,7 @@
 <Group num="0" val="">
 <Page tab_title="FIELD" layout="50x3">
 <Control type="field" tablename="Bri_Con_HDMI" tableid="0" port="5,6,7,8," sig="0,1025,1026,1027,1028,1029,1030,1031,1032,1033,1034,1035,1036,1037,1038,1039,1040,1041,1042,1043,1044,1045,1046,1047,1048,1049,1050,1051,1052,1053,1054,1055,1056,1057,1058,1059,1060,1061,1062,1063,1064,1065,1066,1067,1068,1069,1070,1071,1072,1073,1074,1075,1076,1077,1078,1079,1080,1081,1082,1083,1084,1085,1086,1087,1088,1089,1090,1091,1092,1093,1094,1100,1101,1102," trans="0,1,"/>
-<Control type="field" tablename="Bri_Con_AV_PAL" tableid="0" port="1,2," sig="0,1539,1540,1541,1542,1543," trans="0,1,"/>
+<Control type="field" tablename="Bri_Con_AV_PAL" tableid="0" port="1,2," sig="0,1539,1540,1541,1542" trans="0,1,"/>
 <Control type="field" tablename="Bri_Con_AV_NTSC" tableid="0" port="1,2," sig="1537,1538," trans="0,1,"/>
 <Control type="field" tablename="Bri_Con_AV_SECAM" tableid="0" port="1,2," sig="1543," trans="0,1,"/>
 <Control type="field" tablename="Bri_Con_ATV_PAL" tableid="0" port="0," sig="1539,1540,1541,1542,1543," trans="0,1,"/>
