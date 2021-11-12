@@ -14,8 +14,8 @@
 <Control ui_type="slider" name="dnlp_mvreflsh" range="0~15" addr="5" mask="31:0" dst="U" desc="" default="5" value="5" cmd="dnlp2:mvreflsh"/>
 <Control ui_type="slider" name="dnlp_pavg_btsft" range="0~63" addr="6" mask="31:0" dst="U" desc="" default="5" value="5" cmd="dnlp2:pavg_btsft"/>
 <Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
-<Control ui_type="title" name="histgram_preprocessing" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
-<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="slider" name="dnlp_mvreflsh_offset" range="0~6" addr="79" mask="31:0" dst="U" desc="" default="0" value="0" cmd="dnlp2:mvreflsh_offset"/>
+<Control ui_type="slider" name="dnlp_luma_avg_th" range="0~255" addr="80" mask="31:0" dst="U" desc="" default="50" value="50" cmd="dnlp2:luma_avg_th"/>
 <Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
 <Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
 <Control ui_type="title" name="dnlp_inhist_tiir()" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
@@ -126,6 +126,10 @@
 <Control ui_type="slider" name="dnlp_reg_trend_blk_expand_mode" range="0~3" addr="72" mask="31:0" dst="U" desc="" default="2" value="2" cmd="dnlp2:reg_trend_blk_expand_mode"/>
 <Control ui_type="slider" name="dnlp_ve_hist_cur_gain_precise" range="0~15" addr="74" mask="31:0" dst="U" desc="" default="15" value="15" cmd="dnlp2:ve_hist_cur_gain_precise"/>
 <Control ui_type="slider" name="dnlp_reg_mono_binrang_ed" range="0~63" addr="76" mask="31:0" dst="U" desc="" default="0" value="0" cmd="dnlp2:reg_mono_binrang_ed"/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="slider" name="dnlp_c_hist_gain_base" range="0~256" addr="77" mask="31:0" dst="U" desc="" default="128" value="128" cmd="dnlp2:c_hist_gain_base"/>
+<Control ui_type="slider" name="dnlp_s_hist_gain_base" range="0~256" addr="78" mask="31:0" dst="U" desc="" default="128" value="128" cmd="dnlp2:s_hist_gain_base"/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
 <Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
 <Control ui_type="title" name="dnlp_adp_mtdrate()" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
 <Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
@@ -218,6 +222,8 @@
 <Control ui_type="graph" name="ve_reg_adp_ofset_20" range="" addr="1015" mask="" dst="U" desc="" default="00000000000100020003000300040005000600070008000800070006000500040003000200010000" value="00000000000100020003000300040005000600070008000800070006000500040003000200010000" cmd="dnlp2c:reg_adp_ofset_20"/>
 <Control ui_type="graph" name="ve_reg_mono_protect" range="" addr="1016" mask="" dst="U" desc="" default="030703320358037104600560" value="030703320358037104600560" cmd="dnlp2c:reg_mono_protect"/>
 <Control ui_type="graph" name="ve_reg_trend_wht_expand_lut8" range="" addr="1017" mask="" dst="U" desc="" default="000000020004000600050004000300020000" value="000000020004000600050004000300020000" cmd="dnlp2c:reg_trend_wht_expand_lut8"/>
+<Control ui_type="graph" name="c_hist_gain" range="" addr="1019" mask="" dst="U" desc="" default="01280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128" value="01280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128" cmd="dnlp2c:c_hist_gain"/>
+<Control ui_type="graph" name="s_hist_gain" range="" addr="1020" mask="" dst="U" desc="" default="01280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128" value="01280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128" cmd="dnlp2c:s_hist_gain"/>
 </Page>
 </Group>
 <Group num="1" val="">
@@ -234,8 +240,8 @@
 <Control ui_type="slider" name="dnlp_mvreflsh" range="0~15" addr="5" mask="31:0" dst="U" desc="" default="5" value="5" cmd="dnlp2:mvreflsh"/>
 <Control ui_type="slider" name="dnlp_pavg_btsft" range="0~63" addr="6" mask="31:0" dst="U" desc="" default="5" value="5" cmd="dnlp2:pavg_btsft"/>
 <Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
-<Control ui_type="title" name="histgram_preprocessing" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
-<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="slider" name="dnlp_mvreflsh_offset" range="0~6" addr="79" mask="31:0" dst="U" desc="" default="0" value="0" cmd="dnlp2:mvreflsh_offset"/>
+<Control ui_type="slider" name="dnlp_luma_avg_th" range="0~255" addr="80" mask="31:0" dst="U" desc="" default="50" value="50" cmd="dnlp2:luma_avg_th"/>
 <Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
 <Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
 <Control ui_type="title" name="dnlp_inhist_tiir()" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
@@ -346,6 +352,10 @@
 <Control ui_type="slider" name="dnlp_reg_trend_blk_expand_mode" range="0~3" addr="72" mask="31:0" dst="U" desc="" default="2" value="2" cmd="dnlp2:reg_trend_blk_expand_mode"/>
 <Control ui_type="slider" name="dnlp_ve_hist_cur_gain_precise" range="0~15" addr="74" mask="31:0" dst="U" desc="" default="15" value="15" cmd="dnlp2:ve_hist_cur_gain_precise"/>
 <Control ui_type="slider" name="dnlp_reg_mono_binrang_ed" range="0~63" addr="76" mask="31:0" dst="U" desc="" default="0" value="0" cmd="dnlp2:reg_mono_binrang_ed"/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="slider" name="dnlp_c_hist_gain_base" range="0~256" addr="77" mask="31:0" dst="U" desc="" default="128" value="128" cmd="dnlp2:c_hist_gain_base"/>
+<Control ui_type="slider" name="dnlp_s_hist_gain_base" range="0~256" addr="78" mask="31:0" dst="U" desc="" default="128" value="128" cmd="dnlp2:s_hist_gain_base"/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
 <Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
 <Control ui_type="title" name="dnlp_adp_mtdrate()" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
 <Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
@@ -438,6 +448,8 @@
 <Control ui_type="graph" name="ve_reg_adp_ofset_20" range="" addr="1015" mask="" dst="U" desc="" default="00000000000100020003000300040005000600070008000800070006000500040003000200010000" value="00000000000100020003000300040005000600070008000800070006000500040003000200010000" cmd="dnlp2c:reg_adp_ofset_20"/>
 <Control ui_type="graph" name="ve_reg_mono_protect" range="" addr="1016" mask="" dst="U" desc="" default="030703320358037104600560" value="030703320358037104600560" cmd="dnlp2c:reg_mono_protect"/>
 <Control ui_type="graph" name="ve_reg_trend_wht_expand_lut8" range="" addr="1017" mask="" dst="U" desc="" default="000000020004000600050004000300020000" value="000000020004000600050004000300020000" cmd="dnlp2c:reg_trend_wht_expand_lut8"/>
+<Control ui_type="graph" name="c_hist_gain" range="" addr="1019" mask="" dst="U" desc="" default="01280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128" value="01280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128" cmd="dnlp2c:c_hist_gain"/>
+<Control ui_type="graph" name="s_hist_gain" range="" addr="1020" mask="" dst="U" desc="" default="01280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128" value="01280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128" cmd="dnlp2c:s_hist_gain"/>
 </Page>
 </Group>
 <Group num="2" val="">
@@ -454,8 +466,8 @@
 <Control ui_type="slider" name="dnlp_mvreflsh" range="0~15" addr="5" mask="31:0" dst="U" desc="" default="5" value="5" cmd="dnlp2:mvreflsh"/>
 <Control ui_type="slider" name="dnlp_pavg_btsft" range="0~63" addr="6" mask="31:0" dst="U" desc="" default="5" value="5" cmd="dnlp2:pavg_btsft"/>
 <Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
-<Control ui_type="title" name="histgram_preprocessing" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
-<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="slider" name="dnlp_mvreflsh_offset" range="0~6" addr="79" mask="31:0" dst="U" desc="" default="0" value="0" cmd="dnlp2:mvreflsh_offset"/>
+<Control ui_type="slider" name="dnlp_luma_avg_th" range="0~255" addr="80" mask="31:0" dst="U" desc="" default="50" value="50" cmd="dnlp2:luma_avg_th"/>
 <Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
 <Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
 <Control ui_type="title" name="dnlp_inhist_tiir()" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
@@ -566,6 +578,10 @@
 <Control ui_type="slider" name="dnlp_reg_trend_blk_expand_mode" range="0~3" addr="72" mask="31:0" dst="U" desc="" default="2" value="2" cmd="dnlp2:reg_trend_blk_expand_mode"/>
 <Control ui_type="slider" name="dnlp_ve_hist_cur_gain_precise" range="0~15" addr="74" mask="31:0" dst="U" desc="" default="15" value="15" cmd="dnlp2:ve_hist_cur_gain_precise"/>
 <Control ui_type="slider" name="dnlp_reg_mono_binrang_ed" range="0~63" addr="76" mask="31:0" dst="U" desc="" default="0" value="0" cmd="dnlp2:reg_mono_binrang_ed"/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="slider" name="dnlp_c_hist_gain_base" range="0~256" addr="77" mask="31:0" dst="U" desc="" default="128" value="128" cmd="dnlp2:c_hist_gain_base"/>
+<Control ui_type="slider" name="dnlp_s_hist_gain_base" range="0~256" addr="78" mask="31:0" dst="U" desc="" default="128" value="128" cmd="dnlp2:s_hist_gain_base"/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
 <Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
 <Control ui_type="title" name="dnlp_adp_mtdrate()" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
 <Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
@@ -658,6 +674,8 @@
 <Control ui_type="graph" name="ve_reg_adp_ofset_20" range="" addr="1015" mask="" dst="U" desc="" default="00000000000100020003000300040005000600070008000800070006000500040003000200010000" value="00000000000100020003000300040005000600070008000800070006000500040003000200010000" cmd="dnlp2c:reg_adp_ofset_20"/>
 <Control ui_type="graph" name="ve_reg_mono_protect" range="" addr="1016" mask="" dst="U" desc="" default="030703320358037104600560" value="030703320358037104600560" cmd="dnlp2c:reg_mono_protect"/>
 <Control ui_type="graph" name="ve_reg_trend_wht_expand_lut8" range="" addr="1017" mask="" dst="U" desc="" default="000000020004000600050004000300020000" value="000000020004000600050004000300020000" cmd="dnlp2c:reg_trend_wht_expand_lut8"/>
+<Control ui_type="graph" name="c_hist_gain" range="" addr="1019" mask="" dst="U" desc="" default="01280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128" value="01280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128" cmd="dnlp2c:c_hist_gain"/>
+<Control ui_type="graph" name="s_hist_gain" range="" addr="1020" mask="" dst="U" desc="" default="01280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128" value="01280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128" cmd="dnlp2c:s_hist_gain"/>
 </Page>
 </Group>
 <Group num="3" val="">
@@ -674,8 +692,8 @@
 <Control ui_type="slider" name="dnlp_mvreflsh" range="0~15" addr="5" mask="31:0" dst="U" desc="" default="5" value="5" cmd="dnlp2:mvreflsh"/>
 <Control ui_type="slider" name="dnlp_pavg_btsft" range="0~63" addr="6" mask="31:0" dst="U" desc="" default="5" value="5" cmd="dnlp2:pavg_btsft"/>
 <Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
-<Control ui_type="title" name="histgram_preprocessing" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
-<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="slider" name="dnlp_mvreflsh_offset" range="0~6" addr="79" mask="31:0" dst="U" desc="" default="0" value="0" cmd="dnlp2:mvreflsh_offset"/>
+<Control ui_type="slider" name="dnlp_luma_avg_th" range="0~255" addr="80" mask="31:0" dst="U" desc="" default="50" value="50" cmd="dnlp2:luma_avg_th"/>
 <Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
 <Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
 <Control ui_type="title" name="dnlp_inhist_tiir()" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
@@ -787,6 +805,10 @@
 <Control ui_type="slider" name="dnlp_ve_hist_cur_gain_precise" range="0~15" addr="74" mask="31:0" dst="U" desc="" default="15" value="15" cmd="dnlp2:ve_hist_cur_gain_precise"/>
 <Control ui_type="slider" name="dnlp_reg_mono_binrang_ed" range="0~63" addr="76" mask="31:0" dst="U" desc="" default="0" value="0" cmd="dnlp2:reg_mono_binrang_ed"/>
 <Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="slider" name="dnlp_c_hist_gain_base" range="0~256" addr="77" mask="31:0" dst="U" desc="" default="128" value="128" cmd="dnlp2:c_hist_gain_base"/>
+<Control ui_type="slider" name="dnlp_s_hist_gain_base" range="0~256" addr="78" mask="31:0" dst="U" desc="" default="128" value="128" cmd="dnlp2:s_hist_gain_base"/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
 <Control ui_type="title" name="dnlp_adp_mtdrate()" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
 <Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
 <Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
@@ -878,6 +900,8 @@
 <Control ui_type="graph" name="ve_reg_adp_ofset_20" range="" addr="1015" mask="" dst="U" desc="" default="00000000000100020003000300040005000600070008000800070006000500040003000200010000" value="00000000000100020003000300040005000600070008000800070006000500040003000200010000" cmd="dnlp2c:reg_adp_ofset_20"/>
 <Control ui_type="graph" name="ve_reg_mono_protect" range="" addr="1016" mask="" dst="U" desc="" default="030703320358037104600560" value="030703320358037104600560" cmd="dnlp2c:reg_mono_protect"/>
 <Control ui_type="graph" name="ve_reg_trend_wht_expand_lut8" range="" addr="1017" mask="" dst="U" desc="" default="000000020004000600050004000300020000" value="000000020004000600050004000300020000" cmd="dnlp2c:reg_trend_wht_expand_lut8"/>
+<Control ui_type="graph" name="c_hist_gain" range="" addr="1019" mask="" dst="U" desc="" default="01280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128" value="01280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128" cmd="dnlp2c:c_hist_gain"/>
+<Control ui_type="graph" name="s_hist_gain" range="" addr="1020" mask="" dst="U" desc="" default="01280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128" value="01280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128012801280128" cmd="dnlp2c:s_hist_gain"/>
 </Page>
 </Group>
 </Form>
