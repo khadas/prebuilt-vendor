@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Form name="AI_PQ_HDMI" platform="txlx" commands="">
+<Group num="0" val="">
+<Page tab_title="AI_T3" layout="30x4">
+<Control ui_type="slider" name="ai_pq" rows="skin,bluesky,foods,architecture,grass,night,document" cols="blue,green,skinTone,peaking,sat,contrast" range="" addr="" mask="" dst="" desc="" default="000000025015015000030000000000010000000000000015020000000000000025000002000030000015010000000000000000000003000000000020000002" value="000000025015015000030000000000010000000000000015020000000000000025000002000030000015010000000000000000000003000000000020000002" cmd="ai:table_t3"/>
+</Page>
+<Page tab_title="PARAMETERS" layout="2x4">
+<Control ui_type="checkbox" name="ai_pq_disable:debug" range="0~1" addr="" mask="31:0" dst="U" desc="" default="0" value="0" cmd="ai_pq_t3:ai_pq_disable"/>
+<Control ui_type="slider" name="ai_pq_debug:debug" range="0~3" addr="" mask="31:0" dst="U" desc="" default="2" value="2" cmd="ai_pq_t3:ai_pq_debug"/>
+<Control ui_type="slider" name="ai_pq_value:debug" range="-3~3" addr="" mask="31:0" dst="S" desc="" default="-1" value="-1" cmd="ai_pq_t3:ai_pq_value"/>
+<Control ui_type="slider" name="ai_pq_policy:debug" range="0~255" addr="" mask="31:0" dst="U" desc="" default="2" value="2" cmd="ai_pq_t3:ai_pq_policy"/>
+
+</Page>
+</Group>
+</Form>
+
