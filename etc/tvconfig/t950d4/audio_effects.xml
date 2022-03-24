@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<audio_effects_conf version="2.0" xmlns="http://schemas.android.com/audio/audio_effects_conf/v2_0">
+    <libraries>
+        <library name="virtualx" path="libvirtualx.so"/>
+    </libraries>
+    <effects>
+        <effect name="virtualx" library="virtualx" uuid="61821587-ce3c-4aac-9122-86d874ea1fb1"/>
+    </effects>
+</audio_effects_conf>
