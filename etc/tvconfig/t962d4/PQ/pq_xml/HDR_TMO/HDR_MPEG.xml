@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Form name="HDR_MPEG" platform="txlx" commands="">
+<Group num="0" val="Linear">
+<Page tab_title="HDR_PARAMS" layout="80x4">
+<Control ui_type="title" name="top" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="slider" name="reg_din_swap" range="0~7" addr="0x3800" mask="20:18" dst="U" desc="" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="reg_out_fmt" range="0~1" addr="0x3800" mask="17:17" dst="U" desc="reg_out_fmt : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="reg_only_mat" range="0~1" addr="0x3800" mask="16:16" dst="U" desc="reg_only_mat : // unsigned , default = 0 ,only use input matrix ,work when hdr disable" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="mat_o_en" range="0~1" addr="0x3800" mask="15:15" dst="U" desc="mat_o_en,//output matrix enable ,only work when hdr enable" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="mat_in_en" range="0~1" addr="0x3800" mask="14:14" dst="U" desc="mat_in_en //input matrix enable ,only work when hdr enable" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="reg_VDIN0_HDR2_top_en" range="0~1" addr="0x3800" mask="13:13" dst="U" desc="reg_VDIN0_HDR2_top_en : // unsigned , default = 0,hdr enable singal" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="reg_cgain_mode" range="0~1" addr="0x3800" mask="12:12" dst="U" desc="reg_cgain_mode : // unsigned , default = 1" default="1" value="1" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_gmut_mode" range="0~3" addr="0x3800" mask="7:6" dst="U" desc="reg_gmut_mode : // unsigned , default = 1" default="1" value="1" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="reg_in_shift" range="0~1" addr="0x3800" mask="5:5" dst="U" desc="reg_in_shift : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="reg_in_fmt" range="0~1" addr="0x3800" mask="4:4" dst="U" desc="reg_in_fmt : // unsigned , default = 1" default="1" value="1" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="reg_eo_enable" range="0~1" addr="0x3800" mask="3:3" dst="U" desc="reg_eo_enable : // unsigned , default = 1" default="1" value="1" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="reg_oe_enable" range="0~1" addr="0x3800" mask="2:2" dst="U" desc="reg_oe_enable : // unsigned , default = 1" default="1" value="1" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="clk_tm" range="0~3" addr="0x3801" mask="31:30" dst="U" desc="clk_tm : gate clock ctrl (main clock)  // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="output" range="0~3" addr="0x3801" mask="29:28" dst="U" desc="output : matrix clock gate ctrl        // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="input" range="0~3" addr="0x3801" mask="25:24" dst="U" desc="input : matrix clock gate ctrl         // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="hdr" range="0~3" addr="0x3801" mask="23:22" dst="U" desc="hdr : top cbus clock gate ctrl         // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="eotf" range="0~3" addr="0x3801" mask="21:20" dst="U" desc="eotf : cbus clock gate ctrl            // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="oetf" range="0~3" addr="0x3801" mask="19:18" dst="U" desc="oetf : cbus clock gate ctrl            // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="gamma" range="0~3" addr="0x3801" mask="17:16" dst="U" desc="gamma : mult cbus clock gate ctrl      // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="adaptive" range="0~3" addr="0x3801" mask="15:14" dst="U" desc="adaptive : cbus scaler clock gate ctrl // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="cgain" range="0~3" addr="0x3801" mask="13:12" dst="U" desc="cgain : cbus clock gate ctrl           // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="eotf" range="0~3" addr="0x3801" mask="11:10" dst="U" desc="eotf : clock gate ctrl                 // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="oetf" range="0~3" addr="0x3801" mask="9:8" dst="U" desc="oetf : clock gate ctrl                 // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="gamma" range="0~3" addr="0x3801" mask="7:6" dst="U" desc="gamma : mult clock gate ctrl           // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="adaptive" range="0~3" addr="0x3801" mask="5:4" dst="U" desc="adaptive : scaler clock gate ctrl      // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="uv" range="0~3" addr="0x3801" mask="3:2" dst="U" desc="uv : gain clock gate ctrl              // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="cgain" range="0~3" addr="0x3801" mask="1:0" dst="U" desc="cgain : clock gate ctrl                // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="reg_mtrxi_coef" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="slider" name="coef00" range="-4096~4095" addr="0x3802" mask="28:16" dst="S" desc="coef00 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef01" range="-4096~4095" addr="0x3802" mask="12:0" dst="S" desc="coef01 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef02" range="-4096~4095" addr="0x3803" mask="28:16" dst="S" desc="coef02 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef10" range="-4096~4095" addr="0x3803" mask="12:0" dst="S" desc="coef10 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef11" range="-4096~4095" addr="0x3804" mask="28:16" dst="S" desc="coef11 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef12" range="-4096~4095" addr="0x3804" mask="12:0" dst="S" desc="coef12 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef20" range="-4096~4095" addr="0x3805" mask="28:16" dst="S" desc="coef20 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef21" range="-4096~4095" addr="0x3805" mask="12:0" dst="S" desc="coef21 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef22" range="-4096~4095" addr="0x3806" mask="12:0" dst="S" desc="coef22 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef13" range="-4096~4095" addr="0x3807" mask="28:16" dst="S" desc="coef13 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef14" range="-4096~4095" addr="0x3807" mask="12:0" dst="S" desc="coef14 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef23" range="-4096~4095" addr="0x3808" mask="28:16" dst="S" desc="coef23 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef24" range="-4096~4095" addr="0x3808" mask="12:0" dst="S" desc="coef24 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef15" range="-4096~4095" addr="0x3809" mask="28:16" dst="S" desc="coef15 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef25" range="-4096~4095" addr="0x3809" mask="12:0" dst="S" desc="coef25 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="reg_mtrxi_offst_oup" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="slider" name="offset0" range="-1024~1023" addr="0x380A" mask="26:16" dst="S" desc="offset0 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="offset1" range="-1024~1023" addr="0x380A" mask="10:0" dst="S" desc="offset1 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="offset2" range="-1024~1023" addr="0x380B" mask="10:0" dst="S" desc="offset2 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="reg_mtrxi_offst_inp" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="slider" name="pre_offset0" range="-1024~1023" addr="0x380C" mask="26:16" dst="S" desc="pre_offset0 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="pre_offset1" range="-1024~1023" addr="0x380C" mask="10:0" dst="S" desc="pre_offset1 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="pre_offset2" range="-1024~1023" addr="0x380D" mask="10:0" dst="S" desc="pre_offset2 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="reg_mtrxo_coef" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="slider" name="coef00" range="-4096~4095" addr="0x380E" mask="28:16" dst="S" desc="coef00 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef01" range="-4096~4095" addr="0x380E" mask="12:0" dst="S" desc="coef01 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef02" range="-4096~4095" addr="0x380F" mask="28:16" dst="S" desc="coef02 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef10" range="-4096~4095" addr="0x380F" mask="12:0" dst="S" desc="coef10 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef11" range="-4096~4095" addr="0x3810" mask="28:16" dst="S" desc="coef11 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef12" range="-4096~4095" addr="0x3810" mask="12:0" dst="S" desc="coef12 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef20" range="-4096~4095" addr="0x3811" mask="28:16" dst="S" desc="coef20 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef21" range="-4096~4095" addr="0x3811" mask="12:0" dst="S" desc="coef21 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef22" range="-4096~4095" addr="0x3812" mask="12:0" dst="S" desc="coef22 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef13" range="-4096~4095" addr="0x3813" mask="28:16" dst="S" desc="coef13 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef14" range="-4096~4095" addr="0x3813" mask="12:0" dst="S" desc="coef14 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef23" range="-4096~4095" addr="0x3814" mask="28:16" dst="S" desc="coef23 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef24" range="-4096~4095" addr="0x3814" mask="12:0" dst="S" desc="coef24 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef15" range="-4096~4095" addr="0x3815" mask="28:16" dst="S" desc="coef15 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef25" range="-4096~4095" addr="0x3815" mask="12:0" dst="S" desc="coef25 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="reg_mtrxo_offst_oup" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="slider" name="offset0" range="-1024~1023" addr="0x3816" mask="26:16" dst="S" desc="offset0 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="offset1" range="-1024~1023" addr="0x3816" mask="10:0" dst="S" desc="offset1 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="offset2" range="-1024~1023" addr="0x3817" mask="10:0" dst="S" desc="offset2 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="reg_mtrxo_offst_inp" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="slider" name="pre_offset0" range="-1024~1023" addr="0x3818" mask="26:16" dst="S" desc="pre_offset0 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="pre_offset1" range="-1024~1023" addr="0x3818" mask="10:0" dst="S" desc="pre_offset1 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="pre_offset2" range="-1024~1023" addr="0x3819" mask="10:0" dst="S" desc="pre_offset2 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="mid" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="slider" name="comp_th" range="0~4095" addr="0x381A" mask="19:8" dst="U" desc="comp_th : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="conv_rs" range="0~7" addr="0x381A" mask="7:5" dst="U" desc="conv_rs : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="clmod" range="0~3" addr="0x381A" mask="4:3" dst="U" desc="clmod : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="comp_th" range="0~4095" addr="0x381B" mask="19:8" dst="U" desc="comp_th : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="conv_rs" range="0~7" addr="0x381B" mask="7:5" dst="U" desc="conv_rs : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="clmod" range="0~3" addr="0x381B" mask="4:3" dst="U" desc="clmod : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_cgain_oft2" range="-1024~1023" addr="0x381C" mask="26:16" dst="S" desc="reg_cgain_oft2 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_cgain_oft1" range="-1024~1023" addr="0x381C" mask="10:0" dst="S" desc="reg_cgain_oft1 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="eotf_lut_addr" range="0~255" addr="0x381E" mask="7:0" dst="U" desc="eotf_lut_addr : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="eotf_lut_data" range="0~1048575" addr="0x381F" mask="19:0" dst="U" desc="eotf_lut_data : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="oetf_lut_addr" range="0~255" addr="0x3820" mask="7:0" dst="U" desc="oetf_lut_addr : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="oetf_lut_data" range="0~4095" addr="0x3821" mask="11:0" dst="U" desc="oetf_lut_data : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="cgain_lut_addr" range="0~255" addr="0x3822" mask="7:0" dst="U" desc="cgain_lut_addr : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="cgain_lut_data" range="0~4095" addr="0x3823" mask="11:0" dst="U" desc="cgain_lut_data : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_cgain_coef1" range="0~4095" addr="0x3824" mask="27:16" dst="U" desc="reg_cgain_coef1 : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_cgain_coef0" range="0~4095" addr="0x3824" mask="11:0" dst="U" desc="reg_cgain_coef0 : //unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_cgain_coef2" range="0~4095" addr="0x3825" mask="11:0" dst="U" desc="reg_cgain_coef2 : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="ogain_lut_addr" range="0~255" addr="0x3826" mask="7:0" dst="U" desc="ogain_lut_addr : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="ogain_lut_data" range="0~4095" addr="0x3827" mask="11:0" dst="U" desc="ogain_lut_data : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="reg_adpscl_bypass2" range="0~1" addr="0x3828" mask="6:6" dst="U" desc="reg_adpscl_bypass2 : // unsigned , default = 1" default="1" value="1" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="reg_adpscl_bypass1" range="0~1" addr="0x3828" mask="5:5" dst="U" desc="reg_adpscl_bypass1 : // unsigned , default = 1" default="1" value="1" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="reg_adpscl_bypass0" range="0~1" addr="0x3828" mask="4:4" dst="U" desc="reg_adpscl_bypass0 : // unsigned , default = 1" default="1" value="1" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_adpscl_mode" range="0~3" addr="0x3828" mask="1:0" dst="U" desc="reg_adpscl_mode : // unsigned , default = 1" default="1" value="1" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_adpscl_shift0" range="0~15" addr="0x382A" mask="27:24" dst="U" desc="reg_adpscl_shift0 : // unsigned , default = 0xc" default="12" value="12" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_adpscl_shift1" range="0~15" addr="0x382A" mask="23:20" dst="U" desc="reg_adpscl_shift1 : // unsigned , default = 0xc" default="12" value="12" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_adpscl_shift2" range="0~15" addr="0x382A" mask="19:16" dst="U" desc="reg_adpscl_shift2 : // unsigned , default = 0xc" default="12" value="12" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="reg_adpscl_beta0_s" range="0~1" addr="0x382B" mask="20:20" dst="U" desc="reg_adpscl_beta0_s : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_adpscl_beta0" range="0~1048575" addr="0x382B" mask="19:0" dst="U" desc="reg_adpscl_beta0 : // unsigned , default = 0xfc000" default="1032192" value="1032192" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="reg_adpscl_beta1_s" range="0~1" addr="0x382C" mask="20:20" dst="U" desc="reg_adpscl_beta1_s : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_adpscl_beta1" range="0~1048575" addr="0x382C" mask="19:0" dst="U" desc="reg_adpscl_beta1 : // unsigned , default = 0xfc000" default="1032192" value="1032192" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="reg_adpscl_beta2_s" range="0~1" addr="0x382D" mask="20:20" dst="U" desc="reg_adpscl_beta2_s : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_adpscl_beta2" range="0~1048575" addr="0x382D" mask="19:0" dst="U" desc="reg_adpscl_beta2 : // unsigned , default = 0xfc000" default="1032192" value="1032192" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_adpscl_ys_coef1" range="0~4095" addr="0x382E" mask="27:16" dst="U" desc="reg_adpscl_ys_coef1 : // unsigned , default = 460" default="460" value="460" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_adpscl_ys_coef0" range="0~4095" addr="0x382E" mask="11:0" dst="U" desc="reg_adpscl_ys_coef0 : // unsigned , default = 1188" default="1188" value="1188" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_adpscl_ys_coef2" range="0~4095" addr="0x382F" mask="11:0" dst="U" desc="reg_adpscl_ys_coef2 : // unsigned , default = 104" default="104" value="104" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_gmut_shift" range="0~15" addr="0x3830" mask="3:0" dst="U" desc="reg_gmut_shift : // unsigned , default = 14" default="14" value="14" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_gmut_coef01" range="0~65535" addr="0x3831" mask="31:16" dst="U" desc="reg_gmut_coef01 : // unsigned , default = 674" default="674" value="674" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_gmut_coef00" range="0~65535" addr="0x3831" mask="15:0" dst="U" desc="reg_gmut_coef00 : // unsigned , default = 1285" default="1285" value="1285" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_gmut_coef10" range="0~65535" addr="0x3832" mask="31:16" dst="U" desc="reg_gmut_coef10 : // unsigned , default = 142" default="142" value="142" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_gmut_coef02" range="0~65535" addr="0x3832" mask="15:0" dst="U" desc="reg_gmut_coef02 : // unsigned , default = 89" default="89" value="89" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_gmut_coef12" range="0~65535" addr="0x3833" mask="31:16" dst="U" desc="reg_gmut_coef12 : // unsigned , default = 23" default="23" value="23" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_gmut_coef11" range="0~65535" addr="0x3833" mask="15:0" dst="U" desc="reg_gmut_coef11 : // unsigned , default = 1883" default="1883" value="1883" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_gmut_coef21" range="0~65535" addr="0x3834" mask="31:16" dst="U" desc="reg_gmut_coef21 : // unsigned , default = 180" default="180" value="180" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_gmut_coef20" range="0~65535" addr="0x3834" mask="15:0" dst="U" desc="reg_gmut_coef20 : // unsigned , default = 34" default="34" value="34" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_gmut_coef22" range="0~65535" addr="0x3835" mask="15:0" dst="U" desc="reg_gmut_coef22 : // unsigned , default = 1834" default="1834" value="1834" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="vblank_num_oetf" range="0~255" addr="0x3836" mask="31:24" dst="U" desc="vblank_num_oetf : // unsigned , default = 4" default="4" value="4" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="hblank_num_oetf" range="0~255" addr="0x3836" mask="23:16" dst="U" desc="hblank_num_oetf : // unsigned , default = 4" default="4" value="4" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="vblank_num_eotf" range="0~255" addr="0x3836" mask="15:8" dst="U" desc="vblank_num_eotf : // unsigned , default = 10" default="10" value="10" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="hblank_num_eotf" range="0~255" addr="0x3836" mask="7:0" dst="U" desc="hblank_num_eotf : // unsigned , default = 10" default="10" value="10" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="vblank_num_cgain" range="0~255" addr="0x3837" mask="31:24" dst="U" desc="vblank_num_cgain : // unsigned , default = 10" default="10" value="10" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="hblank_num_cgain" range="0~255" addr="0x3837" mask="23:16" dst="U" desc="hblank_num_cgain : // unsigned , default = 10" default="10" value="10" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="vblank_num_gmut" range="0~255" addr="0x3837" mask="15:8" dst="U" desc="vblank_num_gmut : // unsigned , default = 11" default="11" value="11" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="hblank_num_gmut" range="0~255" addr="0x3837" mask="7:0" dst="U" desc="hblank_num_gmut : // unsigned , default = 11" default="11" value="11" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="vblank_num_adps" range="0~255" addr="0x3838" mask="31:24" dst="U" desc="vblank_num_adps : // unsigned , default = 22" default="22" value="22" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="hblank_num_adps" range="0~255" addr="0x3838" mask="23:16" dst="U" desc="hblank_num_adps : // unsigned , default = 2" default="2" value="2" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="vblank_num_uv" range="0~255" addr="0x3838" mask="15:8" dst="U" desc="vblank_num_uv : // unsigned , default = 4" default="4" value="4" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="hblank_num_uv" range="0~255" addr="0x3838" mask="7:0" dst="U" desc="hblank_num_uv : // unsigned , default = 4" default="4" value="4" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="proc_win_h_ed" range="0~8191" addr="0x3839" mask="28:16" dst="U" desc="proc_win_h_ed : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="proc_win_h_st" range="0~8191" addr="0x3839" mask="12:0" dst="U" desc="proc_win_h_st : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="proc_win_gmut_en" range="0~1" addr="0x383A" mask="31:31" dst="U" desc="proc_win_gmut_en : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="proc_win_adps_en" range="0~1" addr="0x383A" mask="30:30" dst="U" desc="proc_win_adps_en : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="proc_win_cgain_en" range="0~1" addr="0x383A" mask="29:29" dst="U" desc="proc_win_cgain_en : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="proc_win_v_ed" range="0~8191" addr="0x383A" mask="28:16" dst="U" desc="proc_win_v_ed : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="proc_win_v_st" range="0~8191" addr="0x383A" mask="12:0" dst="U" desc="proc_win_v_st : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="matrix_gclk_ctrl" range="0~3" addr="0x383B" mask="5:4" dst="U" desc="matrix_gclk_ctrl : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="enable_sync_sel" range="0~1" addr="0x383B" mask="1:1" dst="U" desc="enable_sync_sel : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="matrix_conv_en" range="0~1" addr="0x383B" mask="0:0" dst="U" desc="matrix_conv_en : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="matrix_gclk_ctrl" range="0~3" addr="0x383C" mask="5:4" dst="U" desc="matrix_gclk_ctrl : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="enable_sync_sel" range="0~1" addr="0x383C" mask="1:1" dst="U" desc="enable_sync_sel : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="matrix_conv_en" range="0~1" addr="0x383C" mask="0:0" dst="U" desc="matrix_conv_en : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+</Page>
+<Page tab_title="HDR_PARAMS2" layout="40x4">
+<Control ui_type="slider" name="tmo_en" range="0~4" addr="0x0" mask="17:17" dst="U" desc="" default="0" value="0" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="highlight" range="0~2048" addr="0x1" mask="20:18" dst="U" desc="" default="145" value="145" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="hist_th" range="0~1024" addr="0x2" mask="20:18" dst="U" desc="" default="110" value="110" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="light_th" range="0~1024" addr="0x3" mask="20:18" dst="U" desc="" default="120" value="120" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="highlight_th1" range="0~256" addr="0x4" mask="20:18" dst="U" desc="" default="70" value="70" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="highlight_th2" range="0~256" addr="0x5" mask="20:18" dst="U" desc="" default="65" value="65" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="display_e" range="0~1023" addr="0x6" mask="20:18" dst="U" desc="" default="630" value="630" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="middle_a" range="0~128" addr="0x7" mask="20:18" dst="U" desc="" default="88" value="88" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="middle_a_adj" range="0~1024" addr="0x8" mask="20:18" dst="U" desc="" default="300" value="300" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="middle_b" range="0~128" addr="0x9" mask="20:18" dst="U" desc="" default="27" value="27" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="middle_s" range="0~128" addr="0xa" mask="20:18" dst="U" desc="" default="64" value="64" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="max_th1" range="0~1024" addr="0xb" mask="20:18" dst="U" desc="" default="50" value="50" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="middle_th" range="0~1024" addr="0xc" mask="20:18" dst="U" desc="" default="500" value="500" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="thold1" range="0~1024" addr="0xd" mask="20:18" dst="U" desc="" default="300" value="300" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="thold2" range="0~1024" addr="0xe" mask="20:18" dst="U" desc="" default="40" value="40" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="thold3" range="0~1024" addr="0xf" mask="20:18" dst="U" desc="" default="100" value="100" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="thold4" range="0~1024" addr="0x10" mask="20:18" dst="U" desc="" default="250" value="250" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="max_th2" range="0~1024" addr="0x11" mask="20:18" dst="U" desc="" default="25" value="25" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="pnum_th" range="0~65536" addr="0x12" mask="20:18" dst="U" desc="" default="5000" value="5000" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="hl0" range="0~128" addr="0x13" mask="20:18" dst="U" desc="" default="60" value="60" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="hl1" range="0~128" addr="0x14" mask="20:18" dst="U" desc="" default="80" value="80" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="hl2" range="0~128" addr="0x15" mask="20:18" dst="U" desc="" default="102" value="102" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="hl3" range="0~128" addr="0x16" mask="20:18" dst="U" desc="" default="60" value="60" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="display_adj" range="0~128" addr="0x17" mask="20:18" dst="U" desc="" default="115" value="115" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="avg_th" range="0~1023" addr="0x18" mask="20:18" dst="U" desc="" default="10" value="10" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="avg_adj" range="0~255" addr="0x19" mask="20:18" dst="U" desc="" default="150" value="150" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="low_adj" range="0~128" addr="0x1a" mask="20:18" dst="U" desc="" default="35" value="35" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="high_en" range="0~3" addr="0x1b" mask="20:18" dst="U" desc="" default="2" value="2" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="high_adj1" range="0~128" addr="0x1c" mask="20:18" dst="U" desc="" default="13" value="13" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="high_adj2" range="0~128" addr="0x1d" mask="20:18" dst="U" desc="" default="30" value="30" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="high_maxdiff" range="0~128" addr="0x1e" mask="20:18" dst="U" desc="" default="64" value="64" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="high_mindiff" range="0~128" addr="0x1f" mask="20:18" dst="U" desc="" default="8" value="8" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="alpha" range="0~256" addr="0x20" mask="20:18" dst="U" desc="" default="250" value="250" cmd="hdr_dbg:name"/>
+</Page>
+<Page tab_title="HDR_CHARTS" layout="35x4">
+<Control ui_type="graph" name="eotf:debug" range="" addr="0x100" mask="" dst="U" desc="" default="1032192,1032192,1032192,1032192,16384,16384,16384,16384,32768,32768,32768,32768,40960,40960,40960,49152,49152,73728,86016,94208,100352,104448,108544,112640,117760,123904,128000,133632,137728,141824,146944,150272,153344,157440,161536,165248,167808,170880,174208,177792,181056,183360,185792,188480,191552,194880,197536,199520,201696,204128,206688,209568,212640,214480,216336,218320,220464,222832,225360,228112,230248,231864,233608,235496,237544,239752,242136,244712,246628,248132,249748,251492,253364,255388,257564,259908,262290,263646,265106,266678,268366,270182,272134,274230,276486,278717,280017,281415,282915,284525,286255,288113,290107,292247,294545,295961,297284,298705,300229,301866,303622,305507,307530,309701,311664,312915,314257,315698,317246,318907,320690,322605,324662,326871,328461,329735,331104,332575,334155,335853,337679,339642,341752,344021,345263,346576,347989,349509,351145,352907,354805,356848,359050,360935,362214,363593,365080,366684,368414,370283,372300,374478,376832" value="1032192,1032192,1032192,1032192,16384,16384,16384,16384,32768,32768,32768,32768,40960,40960,40960,49152,49152,73728,86016,94208,100352,104448,108544,112640,117760,123904,128000,133632,137728,141824,146944,150272,153344,157440,161536,165248,167808,170880,174208,177792,181056,183360,185792,188480,191552,194880,197536,199520,201696,204128,206688,209568,212640,214480,216336,218320,220464,222832,225360,228112,230248,231864,233608,235496,237544,239752,242136,244712,246628,248132,249748,251492,253364,255388,257564,259908,262290,263646,265106,266678,268366,270182,272134,274230,276486,278717,280017,281415,282915,284525,286255,288113,290107,292247,294545,295961,297284,298705,300229,301866,303622,305507,307530,309701,311664,312915,314257,315698,317246,318907,320690,322605,324662,326871,328461,329735,331104,332575,334155,335853,337679,339642,341752,344021,345263,346576,347989,349509,351145,352907,354805,356848,359050,360935,362214,363593,365080,366684,368414,370283,372300,374478,376832" cmd="hdr_rw:eo_y_lut_hdr_sdr_tool"/>
+<Control ui_type="graph" name="ootf:debug" range="" addr="0x101" mask="" dst="U" desc="" default="1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1596,1590,1581,1572,1562,1553,1536,1519,1502,1485,1468,1449,1431,1412,1377,1345,1319,1299,1260,1170,1092,1023,910,819,744,682,630,585,546,511,455,409,372,341,315,292,273,255,227,204,186,170,157,146,136,127,120,113,107,102,97,93,89,85,81,78,75,73,70,68,66,64" value="1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1596,1590,1581,1572,1562,1553,1536,1519,1502,1485,1468,1449,1431,1412,1377,1345,1319,1299,1260,1170,1092,1023,910,819,744,682,630,585,546,511,455,409,372,341,315,292,273,255,227,204,186,170,157,146,136,127,120,113,107,102,97,93,89,85,81,78,75,73,70,68,66,64" cmd="hdr_rw:oo_y_lut_hdr_sdr_tool"/>
+<Control ui_type="graph" name="oetf:debug" range="" addr="0x102" mask="" dst="U" desc="" default="1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1596,1590,1581,1572,1562,1553,1536,1519,1502,1485,1468,1449,1431,1412,1377,1345,1319,1299,1260,1170,1092,1023,910,819,744,682,630,585,546,511,455,409,372,341,315,292,273,255,227,204,186,170,157,146,136,127,120,113,107,102,97,93,89,85,81,78,75,73,70,68,66,64" value="1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1596,1590,1581,1572,1562,1553,1536,1519,1502,1485,1468,1449,1431,1412,1377,1345,1319,1299,1260,1170,1092,1023,910,819,744,682,630,585,546,511,455,409,372,341,315,292,273,255,227,204,186,170,157,146,136,127,120,113,107,102,97,93,89,85,81,78,75,73,70,68,66,64" cmd="hdr_rw:oe_y_lut_hdr_sdr_tool"/>
+<Control ui_type="graph" name="gamut:debug" range="" addr="0x103" mask="" dst="U" desc="" default="425,-150,-18,-31,290,-2,-4,-25,286" value="425,-150,-18,-31,290,-2,-4,-25,286" cmd="hdr_rw:hdr_gamut_tool"/>
+<Control ui_type="graph" name="in_mtx:debug" range="" addr="0x104" mask="" dst="U" desc="" default="1024,0,0,0,1024,0,0,0,1024" value="1024,0,0,0,1024,0,0,0,1024" cmd="hdr_rw:hdr_in_mtx_tool"/>
+<Control ui_type="graph" name="out_mtx:debug" range="" addr="0x105" mask="" dst="U" desc="" default="1024,0,0,0,1024,0,0,0,1024" value="1024,0,0,0,1024,0,0,0,1024" cmd="hdr_rw:hdr_out_mtx_tool"/>
+</Page>
+</Group>
+<Group num="1" val="Dynamic">
+<Page tab_title="HDR_PARAMS" layout="80x4">
+<Control ui_type="title" name="top" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="slider" name="reg_din_swap" range="0~7" addr="0x3800" mask="20:18" dst="U" desc="" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="reg_out_fmt" range="0~1" addr="0x3800" mask="17:17" dst="U" desc="reg_out_fmt : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="reg_only_mat" range="0~1" addr="0x3800" mask="16:16" dst="U" desc="reg_only_mat : // unsigned , default = 0 ,only use input matrix ,work when hdr disable" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="mat_o_en" range="0~1" addr="0x3800" mask="15:15" dst="U" desc="mat_o_en,//output matrix enable ,only work when hdr enable" default="1" value="1" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="mat_in_en" range="0~1" addr="0x3800" mask="14:14" dst="U" desc="mat_in_en //input matrix enable ,only work when hdr enable" default="1" value="1" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="reg_VDIN0_HDR2_top_en" range="0~1" addr="0x3800" mask="13:13" dst="U" desc="reg_VDIN0_HDR2_top_en : // unsigned , default = 0,hdr enable singal" default="1" value="1" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="reg_cgain_mode" range="0~1" addr="0x3800" mask="12:12" dst="U" desc="reg_cgain_mode : // unsigned , default = 1" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_gmut_mode" range="0~3" addr="0x3800" mask="7:6" dst="U" desc="reg_gmut_mode : // unsigned , default = 1" default="1" value="1" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="reg_in_shift" range="0~1" addr="0x3800" mask="5:5" dst="U" desc="reg_in_shift : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="reg_in_fmt" range="0~1" addr="0x3800" mask="4:4" dst="U" desc="reg_in_fmt : // unsigned , default = 1" default="1" value="1" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="reg_eo_enable" range="0~1" addr="0x3800" mask="3:3" dst="U" desc="reg_eo_enable : // unsigned , default = 1" default="1" value="1" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="reg_oe_enable" range="0~1" addr="0x3800" mask="2:2" dst="U" desc="reg_oe_enable : // unsigned , default = 1" default="1" value="1" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="clk_tm" range="0~3" addr="0x3801" mask="31:30" dst="U" desc="clk_tm : gate clock ctrl (main clock)  // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="output" range="0~3" addr="0x3801" mask="29:28" dst="U" desc="output : matrix clock gate ctrl        // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="input" range="0~3" addr="0x3801" mask="25:24" dst="U" desc="input : matrix clock gate ctrl         // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="hdr" range="0~3" addr="0x3801" mask="23:22" dst="U" desc="hdr : top cbus clock gate ctrl         // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="eotf" range="0~3" addr="0x3801" mask="21:20" dst="U" desc="eotf : cbus clock gate ctrl            // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="oetf" range="0~3" addr="0x3801" mask="19:18" dst="U" desc="oetf : cbus clock gate ctrl            // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="gamma" range="0~3" addr="0x3801" mask="17:16" dst="U" desc="gamma : mult cbus clock gate ctrl      // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="adaptive" range="0~3" addr="0x3801" mask="15:14" dst="U" desc="adaptive : cbus scaler clock gate ctrl // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="cgain" range="0~3" addr="0x3801" mask="13:12" dst="U" desc="cgain : cbus clock gate ctrl           // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="eotf" range="0~3" addr="0x3801" mask="11:10" dst="U" desc="eotf : clock gate ctrl                 // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="oetf" range="0~3" addr="0x3801" mask="9:8" dst="U" desc="oetf : clock gate ctrl                 // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="gamma" range="0~3" addr="0x3801" mask="7:6" dst="U" desc="gamma : mult clock gate ctrl           // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="adaptive" range="0~3" addr="0x3801" mask="5:4" dst="U" desc="adaptive : scaler clock gate ctrl      // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="uv" range="0~3" addr="0x3801" mask="3:2" dst="U" desc="uv : gain clock gate ctrl              // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="cgain" range="0~3" addr="0x3801" mask="1:0" dst="U" desc="cgain : clock gate ctrl                // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="reg_mtrxi_coef" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="slider" name="coef00" range="-4096~4095" addr="0x3802" mask="28:16" dst="S" desc="coef00 : // signed , default = 0" default="1197" value="1197" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef01" range="-4096~4095" addr="0x3802" mask="12:0" dst="S" desc="coef01 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef02" range="-4096~4095" addr="0x3803" mask="28:16" dst="S" desc="coef02 : // signed , default = 0" default="1726" value="1726" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef10" range="-4096~4095" addr="0x3803" mask="12:0" dst="S" desc="coef10 : // signed , default = 0" default="1197" value="1197" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef11" range="-4096~4095" addr="0x3804" mask="28:16" dst="S" desc="coef11 : // signed , default = 0" default="-193" value="-193" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef12" range="-4096~4095" addr="0x3804" mask="12:0" dst="S" desc="coef12 : // signed , default = 0" default="-669" value="-669" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef20" range="-4096~4095" addr="0x3805" mask="28:16" dst="S" desc="coef20 : // signed , default = 0" default="1197" value="1197" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef21" range="-4096~4095" addr="0x3805" mask="12:0" dst="S" desc="coef21 : // signed , default = 0" default="2202" value="2202" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef22" range="-4096~4095" addr="0x3806" mask="12:0" dst="S" desc="coef22 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef13" range="-4096~4095" addr="0x3807" mask="28:16" dst="S" desc="coef13 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef14" range="-4096~4095" addr="0x3807" mask="12:0" dst="S" desc="coef14 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef23" range="-4096~4095" addr="0x3808" mask="28:16" dst="S" desc="coef23 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef24" range="-4096~4095" addr="0x3808" mask="12:0" dst="S" desc="coef24 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef15" range="-4096~4095" addr="0x3809" mask="28:16" dst="S" desc="coef15 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef25" range="-4096~4095" addr="0x3809" mask="12:0" dst="S" desc="coef25 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="reg_mtrxi_offst_oup" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="slider" name="offset0" range="-1024~1023" addr="0x380A" mask="26:16" dst="S" desc="offset0 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="offset1" range="-1024~1023" addr="0x380A" mask="10:0" dst="S" desc="offset1 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="offset2" range="-1024~1023" addr="0x380B" mask="10:0" dst="S" desc="offset2 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="reg_mtrxi_offst_inp" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="slider" name="pre_offset0" range="-1024~1023" addr="0x380C" mask="26:16" dst="S" desc="pre_offset0 : // signed , default = 0" default="-64" value="-64" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="pre_offset1" range="-1024~1023" addr="0x380C" mask="10:0" dst="S" desc="pre_offset1 : // signed , default = 0" default="-512" value="-512" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="pre_offset2" range="-1024~1023" addr="0x380D" mask="10:0" dst="S" desc="pre_offset2 : // signed , default = 0" default="-512" value="-512" cmd="common:2,0xff900000"/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="reg_mtrxo_coef" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="slider" name="coef00" range="-4096~4095" addr="0x380E" mask="28:16" dst="S" desc="coef00 : // signed , default = 0" default="186" value="186" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef01" range="-4096~4095" addr="0x380E" mask="12:0" dst="S" desc="coef01 : // signed , default = 0" default="627" value="627" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef02" range="-4096~4095" addr="0x380F" mask="28:16" dst="S" desc="coef02 : // signed , default = 0" default="63" value="63" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef10" range="-4096~4095" addr="0x380F" mask="12:0" dst="S" desc="coef10 : // signed , default = 0" default="-103" value="-103" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef11" range="-4096~4095" addr="0x3810" mask="28:16" dst="S" desc="coef11 : // signed , default = 0" default="-345" value="-345" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef12" range="-4096~4095" addr="0x3810" mask="12:0" dst="S" desc="coef12 : // signed , default = 0" default="448" value="448" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef20" range="-4096~4095" addr="0x3811" mask="28:16" dst="S" desc="coef20 : // signed , default = 0" default="448" value="448" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef21" range="-4096~4095" addr="0x3811" mask="12:0" dst="S" desc="coef21 : // signed , default = 0" default="-407" value="-407" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef22" range="-4096~4095" addr="0x3812" mask="12:0" dst="S" desc="coef22 : // signed , default = 0" default="-41" value="-41" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef13" range="-4096~4095" addr="0x3813" mask="28:16" dst="S" desc="coef13 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef14" range="-4096~4095" addr="0x3813" mask="12:0" dst="S" desc="coef14 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef23" range="-4096~4095" addr="0x3814" mask="28:16" dst="S" desc="coef23 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef24" range="-4096~4095" addr="0x3814" mask="12:0" dst="S" desc="coef24 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef15" range="-4096~4095" addr="0x3815" mask="28:16" dst="S" desc="coef15 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef25" range="-4096~4095" addr="0x3815" mask="12:0" dst="S" desc="coef25 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="reg_mtrxo_offst_oup" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="slider" name="offset0" range="-1024~1023" addr="0x3816" mask="26:16" dst="S" desc="offset0 : // signed , default = 0" default="64" value="64" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="offset1" range="-1024~1023" addr="0x3816" mask="10:0" dst="S" desc="offset1 : // signed , default = 0" default="512" value="512" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="offset2" range="-1024~1023" addr="0x3817" mask="10:0" dst="S" desc="offset2 : // signed , default = 0" default="512" value="512" cmd="common:2,0xff900000"/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="reg_mtrxo_offst_inp" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="slider" name="pre_offset0" range="-1024~1023" addr="0x3818" mask="26:16" dst="S" desc="pre_offset0 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="pre_offset1" range="-1024~1023" addr="0x3818" mask="10:0" dst="S" desc="pre_offset1 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="pre_offset2" range="-1024~1023" addr="0x3819" mask="10:0" dst="S" desc="pre_offset2 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="mid" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="slider" name="comp_th" range="0~4095" addr="0x381A" mask="19:8" dst="U" desc="comp_th : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="conv_rs" range="0~7" addr="0x381A" mask="7:5" dst="U" desc="conv_rs : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="clmod" range="0~3" addr="0x381A" mask="4:3" dst="U" desc="clmod : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="comp_th" range="0~4095" addr="0x381B" mask="19:8" dst="U" desc="comp_th : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="conv_rs" range="0~7" addr="0x381B" mask="7:5" dst="U" desc="conv_rs : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="clmod" range="0~3" addr="0x381B" mask="4:3" dst="U" desc="clmod : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_cgain_oft2" range="-1024~1023" addr="0x381C" mask="26:16" dst="S" desc="reg_cgain_oft2 : // signed , default = 0" default="512" value="512" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_cgain_oft1" range="-1024~1023" addr="0x381C" mask="10:0" dst="S" desc="reg_cgain_oft1 : // signed , default = 0" default="512" value="512" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="eotf_lut_addr" range="0~255" addr="0x381E" mask="7:0" dst="U" desc="eotf_lut_addr : // unsigned , default = 0" default="143" value="143" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="eotf_lut_data" range="0~1048575" addr="0x381F" mask="19:0" dst="U" desc="eotf_lut_data : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="oetf_lut_addr" range="0~255" addr="0x3820" mask="7:0" dst="U" desc="oetf_lut_addr : // unsigned , default = 0" default="75" value="75" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="oetf_lut_data" range="0~4095" addr="0x3821" mask="11:0" dst="U" desc="oetf_lut_data : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="cgain_lut_addr" range="0~255" addr="0x3822" mask="7:0" dst="U" desc="cgain_lut_addr : // unsigned , default = 0" default="33" value="33" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="cgain_lut_data" range="0~4095" addr="0x3823" mask="11:0" dst="U" desc="cgain_lut_data : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_cgain_coef1" range="0~4095" addr="0x3824" mask="27:16" dst="U" desc="reg_cgain_coef1 : // unsigned , default = 0" default="2508" value="2508" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_cgain_coef0" range="0~4095" addr="0x3824" mask="11:0" dst="U" desc="reg_cgain_coef0 : //unsigned , default = 0" default="744" value="744" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_cgain_coef2" range="0~4095" addr="0x3825" mask="11:0" dst="U" desc="reg_cgain_coef2 : // unsigned , default = 0" default="252" value="252" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="ogain_lut_addr" range="0~255" addr="0x3826" mask="7:0" dst="U" desc="ogain_lut_addr : // unsigned , default = 0" default="75" value="75" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="ogain_lut_data" range="0~4095" addr="0x3827" mask="11:0" dst="U" desc="ogain_lut_data : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="reg_adpscl_bypass2" range="0~1" addr="0x3828" mask="6:6" dst="U" desc="reg_adpscl_bypass2 : // unsigned , default = 1" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="reg_adpscl_bypass1" range="0~1" addr="0x3828" mask="5:5" dst="U" desc="reg_adpscl_bypass1 : // unsigned , default = 1" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="reg_adpscl_bypass0" range="0~1" addr="0x3828" mask="4:4" dst="U" desc="reg_adpscl_bypass0 : // unsigned , default = 1" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_adpscl_mode" range="0~3" addr="0x3828" mask="1:0" dst="U" desc="reg_adpscl_mode : // unsigned , default = 1" default="1" value="1" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_adpscl_shift0" range="0~15" addr="0x382A" mask="27:24" dst="U" desc="reg_adpscl_shift0 : // unsigned , default = 0xc" default="10" value="10" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_adpscl_shift1" range="0~15" addr="0x382A" mask="23:20" dst="U" desc="reg_adpscl_shift1 : // unsigned , default = 0xc" default="6" value="6" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_adpscl_shift2" range="0~15" addr="0x382A" mask="19:16" dst="U" desc="reg_adpscl_shift2 : // unsigned , default = 0xc" default="10" value="10" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="reg_adpscl_beta0_s" range="0~1" addr="0x382B" mask="20:20" dst="U" desc="reg_adpscl_beta0_s : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_adpscl_beta0" range="0~1048575" addr="0x382B" mask="19:0" dst="U" desc="reg_adpscl_beta0 : // unsigned , default = 0xfc000" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="reg_adpscl_beta1_s" range="0~1" addr="0x382C" mask="20:20" dst="U" desc="reg_adpscl_beta1_s : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_adpscl_beta1" range="0~1048575" addr="0x382C" mask="19:0" dst="U" desc="reg_adpscl_beta1 : // unsigned , default = 0xfc000" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="reg_adpscl_beta2_s" range="0~1" addr="0x382D" mask="20:20" dst="U" desc="reg_adpscl_beta2_s : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_adpscl_beta2" range="0~1048575" addr="0x382D" mask="19:0" dst="U" desc="reg_adpscl_beta2 : // unsigned , default = 0xfc000" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_adpscl_ys_coef1" range="0~4095" addr="0x382E" mask="27:16" dst="U" desc="reg_adpscl_ys_coef1 : // unsigned , default = 460" default="1024" value="1024" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_adpscl_ys_coef0" range="0~4095" addr="0x382E" mask="11:0" dst="U" desc="reg_adpscl_ys_coef0 : // unsigned , default = 1188" default="1024" value="1024" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_adpscl_ys_coef2" range="0~4095" addr="0x382F" mask="11:0" dst="U" desc="reg_adpscl_ys_coef2 : // unsigned , default = 104" default="1024" value="1024" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_gmut_shift" range="0~15" addr="0x3830" mask="3:0" dst="U" desc="reg_gmut_shift : // unsigned , default = 14" default="8" value="8" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_gmut_coef01" range="0~65535" addr="0x3831" mask="31:16" dst="U" desc="reg_gmut_coef01 : // unsigned , default = 674" default="65386" value="65386" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_gmut_coef00" range="0~65535" addr="0x3831" mask="15:0" dst="U" desc="reg_gmut_coef00 : // unsigned , default = 1285" default="425" value="425" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_gmut_coef10" range="0~65535" addr="0x3832" mask="31:16" dst="U" desc="reg_gmut_coef10 : // unsigned , default = 142" default="65504" value="65504" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_gmut_coef02" range="0~65535" addr="0x3832" mask="15:0" dst="U" desc="reg_gmut_coef02 : // unsigned , default = 89" default="65517" value="65517" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_gmut_coef12" range="0~65535" addr="0x3833" mask="31:16" dst="U" desc="reg_gmut_coef12 : // unsigned , default = 23" default="65534" value="65534" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_gmut_coef11" range="0~65535" addr="0x3833" mask="15:0" dst="U" desc="reg_gmut_coef11 : // unsigned , default = 1883" default="290" value="290" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_gmut_coef21" range="0~65535" addr="0x3834" mask="31:16" dst="U" desc="reg_gmut_coef21 : // unsigned , default = 180" default="65510" value="65510" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_gmut_coef20" range="0~65535" addr="0x3834" mask="15:0" dst="U" desc="reg_gmut_coef20 : // unsigned , default = 34" default="65531" value="65531" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_gmut_coef22" range="0~65535" addr="0x3835" mask="15:0" dst="U" desc="reg_gmut_coef22 : // unsigned , default = 1834" default="286" value="286" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="vblank_num_oetf" range="0~255" addr="0x3836" mask="31:24" dst="U" desc="vblank_num_oetf : // unsigned , default = 4" default="4" value="4" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="hblank_num_oetf" range="0~255" addr="0x3836" mask="23:16" dst="U" desc="hblank_num_oetf : // unsigned , default = 4" default="4" value="4" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="vblank_num_eotf" range="0~255" addr="0x3836" mask="15:8" dst="U" desc="vblank_num_eotf : // unsigned , default = 10" default="10" value="10" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="hblank_num_eotf" range="0~255" addr="0x3836" mask="7:0" dst="U" desc="hblank_num_eotf : // unsigned , default = 10" default="10" value="10" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="vblank_num_cgain" range="0~255" addr="0x3837" mask="31:24" dst="U" desc="vblank_num_cgain : // unsigned , default = 10" default="10" value="10" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="hblank_num_cgain" range="0~255" addr="0x3837" mask="23:16" dst="U" desc="hblank_num_cgain : // unsigned , default = 10" default="10" value="10" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="vblank_num_gmut" range="0~255" addr="0x3837" mask="15:8" dst="U" desc="vblank_num_gmut : // unsigned , default = 11" default="11" value="11" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="hblank_num_gmut" range="0~255" addr="0x3837" mask="7:0" dst="U" desc="hblank_num_gmut : // unsigned , default = 11" default="11" value="11" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="vblank_num_adps" range="0~255" addr="0x3838" mask="31:24" dst="U" desc="vblank_num_adps : // unsigned , default = 22" default="22" value="22" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="hblank_num_adps" range="0~255" addr="0x3838" mask="23:16" dst="U" desc="hblank_num_adps : // unsigned , default = 2" default="22" value="22" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="vblank_num_uv" range="0~255" addr="0x3838" mask="15:8" dst="U" desc="vblank_num_uv : // unsigned , default = 4" default="4" value="4" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="hblank_num_uv" range="0~255" addr="0x3838" mask="7:0" dst="U" desc="hblank_num_uv : // unsigned , default = 4" default="4" value="4" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="proc_win_h_ed" range="0~8191" addr="0x3839" mask="28:16" dst="U" desc="proc_win_h_ed : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="proc_win_h_st" range="0~8191" addr="0x3839" mask="12:0" dst="U" desc="proc_win_h_st : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="proc_win_gmut_en" range="0~1" addr="0x383A" mask="31:31" dst="U" desc="proc_win_gmut_en : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="proc_win_adps_en" range="0~1" addr="0x383A" mask="30:30" dst="U" desc="proc_win_adps_en : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="proc_win_cgain_en" range="0~1" addr="0x383A" mask="29:29" dst="U" desc="proc_win_cgain_en : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="proc_win_v_ed" range="0~8191" addr="0x383A" mask="28:16" dst="U" desc="proc_win_v_ed : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="proc_win_v_st" range="0~8191" addr="0x383A" mask="12:0" dst="U" desc="proc_win_v_st : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="matrix_gclk_ctrl" range="0~3" addr="0x383B" mask="5:4" dst="U" desc="matrix_gclk_ctrl : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="enable_sync_sel" range="0~1" addr="0x383B" mask="1:1" dst="U" desc="enable_sync_sel : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="matrix_conv_en" range="0~1" addr="0x383B" mask="0:0" dst="U" desc="matrix_conv_en : // unsigned , default = 0" default="1" value="1" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="matrix_gclk_ctrl" range="0~3" addr="0x383C" mask="5:4" dst="U" desc="matrix_gclk_ctrl : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="enable_sync_sel" range="0~1" addr="0x383C" mask="1:1" dst="U" desc="enable_sync_sel : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="matrix_conv_en" range="0~1" addr="0x383C" mask="0:0" dst="U" desc="matrix_conv_en : // unsigned , default = 0" default="1" value="1" cmd="common:2,0xff900000"/>
+</Page>
+<Page tab_title="HDR_PARAMS2" layout="40x4">
+<Control ui_type="slider" name="tmo_en" range="0~4" addr="0x0" mask="17:17" dst="U" desc="" default="1" value="1" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="highlight" range="0~2048" addr="0x1" mask="20:18" dst="U" desc="" default="185" value="185" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="hist_th" range="0~1024" addr="0x2" mask="20:18" dst="U" desc="" default="110" value="110" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="light_th" range="0~1024" addr="0x3" mask="20:18" dst="U" desc="" default="120" value="120" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="highlight_th1" range="0~256" addr="0x4" mask="20:18" dst="U" desc="" default="70" value="70" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="highlight_th2" range="0~256" addr="0x5" mask="20:18" dst="U" desc="" default="65" value="65" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="display_e" range="0~1023" addr="0x6" mask="20:18" dst="U" desc="" default="636" value="636" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="middle_a" range="0~128" addr="0x7" mask="20:18" dst="U" desc="" default="102" value="102" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="middle_a_adj" range="0~1024" addr="0x8" mask="20:18" dst="U" desc="" default="336" value="336" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="middle_b" range="0~128" addr="0x9" mask="20:18" dst="U" desc="" default="27" value="27" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="middle_s" range="0~128" addr="0xa" mask="20:18" dst="U" desc="" default="64" value="64" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="max_th1" range="0~1024" addr="0xb" mask="20:18" dst="U" desc="" default="50" value="50" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="middle_th" range="0~1024" addr="0xc" mask="20:18" dst="U" desc="" default="500" value="500" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="thold1" range="0~1024" addr="0xd" mask="20:18" dst="U" desc="" default="300" value="300" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="thold2" range="0~1024" addr="0xe" mask="20:18" dst="U" desc="" default="30" value="30" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="thold3" range="0~1024" addr="0xf" mask="20:18" dst="U" desc="" default="100" value="100" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="thold4" range="0~1024" addr="0x10" mask="20:18" dst="U" desc="" default="250" value="250" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="max_th2" range="0~1024" addr="0x11" mask="20:18" dst="U" desc="" default="18" value="18" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="pnum_th" range="0~65536" addr="0x12" mask="20:18" dst="U" desc="" default="5000" value="5000" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="hl0" range="0~128" addr="0x13" mask="20:18" dst="U" desc="" default="60" value="60" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="hl1" range="0~128" addr="0x14" mask="20:18" dst="U" desc="" default="38" value="38" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="hl2" range="0~128" addr="0x15" mask="20:18" dst="U" desc="" default="102" value="102" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="hl3" range="0~128" addr="0x16" mask="20:18" dst="U" desc="" default="90" value="90" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="display_adj" range="0~128" addr="0x17" mask="20:18" dst="U" desc="" default="115" value="115" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="avg_th" range="0~1023" addr="0x18" mask="20:18" dst="U" desc="" default="10" value="10" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="avg_adj" range="0~255" addr="0x19" mask="20:18" dst="U" desc="" default="150" value="150" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="low_adj" range="0~128" addr="0x1a" mask="20:18" dst="U" desc="" default="30" value="30" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="high_en" range="0~3" addr="0x1b" mask="20:18" dst="U" desc="" default="2" value="2" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="high_adj1" range="0~128" addr="0x1c" mask="20:18" dst="U" desc="" default="13" value="13" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="high_adj2" range="0~128" addr="0x1d" mask="20:18" dst="U" desc="" default="77" value="77" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="high_maxdiff" range="0~128" addr="0x1e" mask="20:18" dst="U" desc="" default="64" value="64" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="high_mindiff" range="0~128" addr="0x1f" mask="20:18" dst="U" desc="" default="8" value="8" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="alpha" range="0~256" addr="0x20" mask="20:18" dst="U" desc="" default="250" value="250" cmd="hdr_dbg:name"/>
+</Page>
+<Page tab_title="HDR_CHARTS" layout="35x4">
+<Control ui_type="graph" name="eotf:debug" range="" addr="0x100" mask="" dst="U" desc="" default="1032192,1032192,1032192,1032192,16384,16384,16384,16384,32768,32768,32768,32768,40960,40960,40960,49152,49152,73728,86016,94208,100352,104448,108544,112640,117760,123904,128000,133632,137728,141824,146944,150272,153344,157440,161536,165248,167808,170880,174208,177792,181056,183360,185792,188480,191552,194880,197536,199520,201696,204128,206688,209568,212640,214480,216336,218320,220464,222832,225360,228112,230248,231864,233608,235496,237544,239752,242136,244712,246628,248132,249748,251492,253364,255388,257564,259908,262290,263646,265106,266678,268366,270182,272134,274230,276486,278717,280017,281415,282915,284525,286255,288113,290107,292247,294545,295961,297284,298705,300229,301866,303622,305507,307530,309701,311664,312915,314257,315698,317246,318907,320690,322605,324662,326871,328461,329735,331104,332575,334155,335853,337679,339642,341752,344021,345263,346576,347989,349509,351145,352907,354805,356848,359050,360935,362214,363593,365080,366684,368414,370283,372300,374478,376832" value="1032192,1032192,1032192,1032192,16384,16384,16384,16384,32768,32768,32768,32768,40960,40960,40960,49152,49152,73728,86016,94208,100352,104448,108544,112640,117760,123904,128000,133632,137728,141824,146944,150272,153344,157440,161536,165248,167808,170880,174208,177792,181056,183360,185792,188480,191552,194880,197536,199520,201696,204128,206688,209568,212640,214480,216336,218320,220464,222832,225360,228112,230248,231864,233608,235496,237544,239752,242136,244712,246628,248132,249748,251492,253364,255388,257564,259908,262290,263646,265106,266678,268366,270182,272134,274230,276486,278717,280017,281415,282915,284525,286255,288113,290107,292247,294545,295961,297284,298705,300229,301866,303622,305507,307530,309701,311664,312915,314257,315698,317246,318907,320690,322605,324662,326871,328461,329735,331104,332575,334155,335853,337679,339642,341752,344021,345263,346576,347989,349509,351145,352907,354805,356848,359050,360935,362214,363593,365080,366684,368414,370283,372300,374478,376832" cmd="hdr_rw:eo_y_lut_hdr_sdr_tool"/>
+<Control ui_type="graph" name="ootf:debug" range="" addr="0x101" mask="" dst="U" desc="" default="1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1596,1590,1581,1572,1562,1553,1536,1519,1502,1485,1468,1449,1431,1412,1377,1345,1319,1299,1260,1170,1092,1023,910,819,744,682,630,585,546,511,455,409,372,341,315,292,273,255,227,204,186,170,157,146,136,127,120,113,107,102,97,93,89,85,81,78,75,73,70,68,66,64" value="1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1596,1590,1581,1572,1562,1553,1536,1519,1502,1485,1468,1449,1431,1412,1377,1345,1319,1299,1260,1170,1092,1023,910,819,744,682,630,585,546,511,455,409,372,341,315,292,273,255,227,204,186,170,157,146,136,127,120,113,107,102,97,93,89,85,81,78,75,73,70,68,66,64" cmd="hdr_rw:oo_y_lut_hdr_sdr_tool"/>
+<Control ui_type="graph" name="oetf:debug" range="" addr="0x102" mask="" dst="U" desc="" default="1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1596,1590,1581,1572,1562,1553,1536,1519,1502,1485,1468,1449,1431,1412,1377,1345,1319,1299,1260,1170,1092,1023,910,819,744,682,630,585,546,511,455,409,372,341,315,292,273,255,227,204,186,170,157,146,136,127,120,113,107,102,97,93,89,85,81,78,75,73,70,68,66,64" value="1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1596,1590,1581,1572,1562,1553,1536,1519,1502,1485,1468,1449,1431,1412,1377,1345,1319,1299,1260,1170,1092,1023,910,819,744,682,630,585,546,511,455,409,372,341,315,292,273,255,227,204,186,170,157,146,136,127,120,113,107,102,97,93,89,85,81,78,75,73,70,68,66,64" cmd="hdr_rw:oe_y_lut_hdr_sdr_tool"/>
+<Control ui_type="graph" name="gamut:debug" range="" addr="0x103" mask="" dst="U" desc="" default="425,-150,-18,-31,290,-2,-4,-25,286" value="425,-150,-18,-31,290,-2,-4,-25,286" cmd="hdr_rw:hdr_gamut_tool"/>
+<Control ui_type="graph" name="in_mtx:debug" range="" addr="0x104" mask="" dst="U" desc="" default="1024,0,0,0,1024,0,0,0,1024" value="1024,0,0,0,1024,0,0,0,1024" cmd="hdr_rw:hdr_in_mtx_tool"/>
+<Control ui_type="graph" name="out_mtx:debug" range="" addr="0x105" mask="" dst="U" desc="" default="1024,0,0,0,1024,0,0,0,1024" value="1024,0,0,0,1024,0,0,0,1024" cmd="hdr_rw:hdr_out_mtx_tool"/>
+</Page>
+</Group>
+<Group num="2" val="Static">
+<Page tab_title="HDR_PARAMS" layout="80x4">
+<Control ui_type="title" name="top" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="slider" name="reg_din_swap" range="0~7" addr="0x3800" mask="20:18" dst="U" desc="" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="reg_out_fmt" range="0~1" addr="0x3800" mask="17:17" dst="U" desc="reg_out_fmt : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="reg_only_mat" range="0~1" addr="0x3800" mask="16:16" dst="U" desc="reg_only_mat : // unsigned , default = 0 ,only use input matrix ,work when hdr disable" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="mat_o_en" range="0~1" addr="0x3800" mask="15:15" dst="U" desc="mat_o_en,//output matrix enable ,only work when hdr enable" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="mat_in_en" range="0~1" addr="0x3800" mask="14:14" dst="U" desc="mat_in_en //input matrix enable ,only work when hdr enable" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="reg_VDIN0_HDR2_top_en" range="0~1" addr="0x3800" mask="13:13" dst="U" desc="reg_VDIN0_HDR2_top_en : // unsigned , default = 0,hdr enable singal" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="reg_cgain_mode" range="0~1" addr="0x3800" mask="12:12" dst="U" desc="reg_cgain_mode : // unsigned , default = 1" default="1" value="1" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_gmut_mode" range="0~3" addr="0x3800" mask="7:6" dst="U" desc="reg_gmut_mode : // unsigned , default = 1" default="1" value="1" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="reg_in_shift" range="0~1" addr="0x3800" mask="5:5" dst="U" desc="reg_in_shift : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="reg_in_fmt" range="0~1" addr="0x3800" mask="4:4" dst="U" desc="reg_in_fmt : // unsigned , default = 1" default="1" value="1" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="reg_eo_enable" range="0~1" addr="0x3800" mask="3:3" dst="U" desc="reg_eo_enable : // unsigned , default = 1" default="1" value="1" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="reg_oe_enable" range="0~1" addr="0x3800" mask="2:2" dst="U" desc="reg_oe_enable : // unsigned , default = 1" default="1" value="1" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="clk_tm" range="0~3" addr="0x3801" mask="31:30" dst="U" desc="clk_tm : gate clock ctrl (main clock)  // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="output" range="0~3" addr="0x3801" mask="29:28" dst="U" desc="output : matrix clock gate ctrl        // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="input" range="0~3" addr="0x3801" mask="25:24" dst="U" desc="input : matrix clock gate ctrl         // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="hdr" range="0~3" addr="0x3801" mask="23:22" dst="U" desc="hdr : top cbus clock gate ctrl         // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="eotf" range="0~3" addr="0x3801" mask="21:20" dst="U" desc="eotf : cbus clock gate ctrl            // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="oetf" range="0~3" addr="0x3801" mask="19:18" dst="U" desc="oetf : cbus clock gate ctrl            // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="gamma" range="0~3" addr="0x3801" mask="17:16" dst="U" desc="gamma : mult cbus clock gate ctrl      // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="adaptive" range="0~3" addr="0x3801" mask="15:14" dst="U" desc="adaptive : cbus scaler clock gate ctrl // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="cgain" range="0~3" addr="0x3801" mask="13:12" dst="U" desc="cgain : cbus clock gate ctrl           // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="eotf" range="0~3" addr="0x3801" mask="11:10" dst="U" desc="eotf : clock gate ctrl                 // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="oetf" range="0~3" addr="0x3801" mask="9:8" dst="U" desc="oetf : clock gate ctrl                 // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="gamma" range="0~3" addr="0x3801" mask="7:6" dst="U" desc="gamma : mult clock gate ctrl           // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="adaptive" range="0~3" addr="0x3801" mask="5:4" dst="U" desc="adaptive : scaler clock gate ctrl      // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="uv" range="0~3" addr="0x3801" mask="3:2" dst="U" desc="uv : gain clock gate ctrl              // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="cgain" range="0~3" addr="0x3801" mask="1:0" dst="U" desc="cgain : clock gate ctrl                // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="reg_mtrxi_coef" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="slider" name="coef00" range="-4096~4095" addr="0x3802" mask="28:16" dst="S" desc="coef00 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef01" range="-4096~4095" addr="0x3802" mask="12:0" dst="S" desc="coef01 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef02" range="-4096~4095" addr="0x3803" mask="28:16" dst="S" desc="coef02 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef10" range="-4096~4095" addr="0x3803" mask="12:0" dst="S" desc="coef10 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef11" range="-4096~4095" addr="0x3804" mask="28:16" dst="S" desc="coef11 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef12" range="-4096~4095" addr="0x3804" mask="12:0" dst="S" desc="coef12 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef20" range="-4096~4095" addr="0x3805" mask="28:16" dst="S" desc="coef20 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef21" range="-4096~4095" addr="0x3805" mask="12:0" dst="S" desc="coef21 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef22" range="-4096~4095" addr="0x3806" mask="12:0" dst="S" desc="coef22 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef13" range="-4096~4095" addr="0x3807" mask="28:16" dst="S" desc="coef13 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef14" range="-4096~4095" addr="0x3807" mask="12:0" dst="S" desc="coef14 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef23" range="-4096~4095" addr="0x3808" mask="28:16" dst="S" desc="coef23 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef24" range="-4096~4095" addr="0x3808" mask="12:0" dst="S" desc="coef24 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef15" range="-4096~4095" addr="0x3809" mask="28:16" dst="S" desc="coef15 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef25" range="-4096~4095" addr="0x3809" mask="12:0" dst="S" desc="coef25 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="reg_mtrxi_offst_oup" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="slider" name="offset0" range="-1024~1023" addr="0x380A" mask="26:16" dst="S" desc="offset0 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="offset1" range="-1024~1023" addr="0x380A" mask="10:0" dst="S" desc="offset1 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="offset2" range="-1024~1023" addr="0x380B" mask="10:0" dst="S" desc="offset2 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="reg_mtrxi_offst_inp" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="slider" name="pre_offset0" range="-1024~1023" addr="0x380C" mask="26:16" dst="S" desc="pre_offset0 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="pre_offset1" range="-1024~1023" addr="0x380C" mask="10:0" dst="S" desc="pre_offset1 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="pre_offset2" range="-1024~1023" addr="0x380D" mask="10:0" dst="S" desc="pre_offset2 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="reg_mtrxo_coef" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="slider" name="coef00" range="-4096~4095" addr="0x380E" mask="28:16" dst="S" desc="coef00 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef01" range="-4096~4095" addr="0x380E" mask="12:0" dst="S" desc="coef01 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef02" range="-4096~4095" addr="0x380F" mask="28:16" dst="S" desc="coef02 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef10" range="-4096~4095" addr="0x380F" mask="12:0" dst="S" desc="coef10 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef11" range="-4096~4095" addr="0x3810" mask="28:16" dst="S" desc="coef11 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef12" range="-4096~4095" addr="0x3810" mask="12:0" dst="S" desc="coef12 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef20" range="-4096~4095" addr="0x3811" mask="28:16" dst="S" desc="coef20 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef21" range="-4096~4095" addr="0x3811" mask="12:0" dst="S" desc="coef21 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef22" range="-4096~4095" addr="0x3812" mask="12:0" dst="S" desc="coef22 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef13" range="-4096~4095" addr="0x3813" mask="28:16" dst="S" desc="coef13 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef14" range="-4096~4095" addr="0x3813" mask="12:0" dst="S" desc="coef14 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef23" range="-4096~4095" addr="0x3814" mask="28:16" dst="S" desc="coef23 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef24" range="-4096~4095" addr="0x3814" mask="12:0" dst="S" desc="coef24 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef15" range="-4096~4095" addr="0x3815" mask="28:16" dst="S" desc="coef15 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="coef25" range="-4096~4095" addr="0x3815" mask="12:0" dst="S" desc="coef25 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="reg_mtrxo_offst_oup" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="slider" name="offset0" range="-1024~1023" addr="0x3816" mask="26:16" dst="S" desc="offset0 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="offset1" range="-1024~1023" addr="0x3816" mask="10:0" dst="S" desc="offset1 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="offset2" range="-1024~1023" addr="0x3817" mask="10:0" dst="S" desc="offset2 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="reg_mtrxo_offst_inp" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="slider" name="pre_offset0" range="-1024~1023" addr="0x3818" mask="26:16" dst="S" desc="pre_offset0 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="pre_offset1" range="-1024~1023" addr="0x3818" mask="10:0" dst="S" desc="pre_offset1 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="pre_offset2" range="-1024~1023" addr="0x3819" mask="10:0" dst="S" desc="pre_offset2 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="mid" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="title" name="" range="" addr="" mask="" dst="" desc="" default="" value="" cmd=""/>
+<Control ui_type="slider" name="comp_th" range="0~4095" addr="0x381A" mask="19:8" dst="U" desc="comp_th : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="conv_rs" range="0~7" addr="0x381A" mask="7:5" dst="U" desc="conv_rs : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="clmod" range="0~3" addr="0x381A" mask="4:3" dst="U" desc="clmod : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="comp_th" range="0~4095" addr="0x381B" mask="19:8" dst="U" desc="comp_th : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="conv_rs" range="0~7" addr="0x381B" mask="7:5" dst="U" desc="conv_rs : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="clmod" range="0~3" addr="0x381B" mask="4:3" dst="U" desc="clmod : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_cgain_oft2" range="-1024~1023" addr="0x381C" mask="26:16" dst="S" desc="reg_cgain_oft2 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_cgain_oft1" range="-1024~1023" addr="0x381C" mask="10:0" dst="S" desc="reg_cgain_oft1 : // signed , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="eotf_lut_addr" range="0~255" addr="0x381E" mask="7:0" dst="U" desc="eotf_lut_addr : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="eotf_lut_data" range="0~1048575" addr="0x381F" mask="19:0" dst="U" desc="eotf_lut_data : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="oetf_lut_addr" range="0~255" addr="0x3820" mask="7:0" dst="U" desc="oetf_lut_addr : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="oetf_lut_data" range="0~4095" addr="0x3821" mask="11:0" dst="U" desc="oetf_lut_data : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="cgain_lut_addr" range="0~255" addr="0x3822" mask="7:0" dst="U" desc="cgain_lut_addr : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="cgain_lut_data" range="0~4095" addr="0x3823" mask="11:0" dst="U" desc="cgain_lut_data : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_cgain_coef1" range="0~4095" addr="0x3824" mask="27:16" dst="U" desc="reg_cgain_coef1 : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_cgain_coef0" range="0~4095" addr="0x3824" mask="11:0" dst="U" desc="reg_cgain_coef0 : //unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_cgain_coef2" range="0~4095" addr="0x3825" mask="11:0" dst="U" desc="reg_cgain_coef2 : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="ogain_lut_addr" range="0~255" addr="0x3826" mask="7:0" dst="U" desc="ogain_lut_addr : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="ogain_lut_data" range="0~4095" addr="0x3827" mask="11:0" dst="U" desc="ogain_lut_data : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="reg_adpscl_bypass2" range="0~1" addr="0x3828" mask="6:6" dst="U" desc="reg_adpscl_bypass2 : // unsigned , default = 1" default="1" value="1" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="reg_adpscl_bypass1" range="0~1" addr="0x3828" mask="5:5" dst="U" desc="reg_adpscl_bypass1 : // unsigned , default = 1" default="1" value="1" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="reg_adpscl_bypass0" range="0~1" addr="0x3828" mask="4:4" dst="U" desc="reg_adpscl_bypass0 : // unsigned , default = 1" default="1" value="1" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_adpscl_mode" range="0~3" addr="0x3828" mask="1:0" dst="U" desc="reg_adpscl_mode : // unsigned , default = 1" default="1" value="1" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_adpscl_shift0" range="0~15" addr="0x382A" mask="27:24" dst="U" desc="reg_adpscl_shift0 : // unsigned , default = 0xc" default="12" value="12" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_adpscl_shift1" range="0~15" addr="0x382A" mask="23:20" dst="U" desc="reg_adpscl_shift1 : // unsigned , default = 0xc" default="12" value="12" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_adpscl_shift2" range="0~15" addr="0x382A" mask="19:16" dst="U" desc="reg_adpscl_shift2 : // unsigned , default = 0xc" default="12" value="12" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="reg_adpscl_beta0_s" range="0~1" addr="0x382B" mask="20:20" dst="U" desc="reg_adpscl_beta0_s : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_adpscl_beta0" range="0~1048575" addr="0x382B" mask="19:0" dst="U" desc="reg_adpscl_beta0 : // unsigned , default = 0xfc000" default="1032192" value="1032192" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="reg_adpscl_beta1_s" range="0~1" addr="0x382C" mask="20:20" dst="U" desc="reg_adpscl_beta1_s : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_adpscl_beta1" range="0~1048575" addr="0x382C" mask="19:0" dst="U" desc="reg_adpscl_beta1 : // unsigned , default = 0xfc000" default="1032192" value="1032192" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="reg_adpscl_beta2_s" range="0~1" addr="0x382D" mask="20:20" dst="U" desc="reg_adpscl_beta2_s : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_adpscl_beta2" range="0~1048575" addr="0x382D" mask="19:0" dst="U" desc="reg_adpscl_beta2 : // unsigned , default = 0xfc000" default="1032192" value="1032192" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_adpscl_ys_coef1" range="0~4095" addr="0x382E" mask="27:16" dst="U" desc="reg_adpscl_ys_coef1 : // unsigned , default = 460" default="460" value="460" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_adpscl_ys_coef0" range="0~4095" addr="0x382E" mask="11:0" dst="U" desc="reg_adpscl_ys_coef0 : // unsigned , default = 1188" default="1188" value="1188" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_adpscl_ys_coef2" range="0~4095" addr="0x382F" mask="11:0" dst="U" desc="reg_adpscl_ys_coef2 : // unsigned , default = 104" default="104" value="104" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_gmut_shift" range="0~15" addr="0x3830" mask="3:0" dst="U" desc="reg_gmut_shift : // unsigned , default = 14" default="14" value="14" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_gmut_coef01" range="0~65535" addr="0x3831" mask="31:16" dst="U" desc="reg_gmut_coef01 : // unsigned , default = 674" default="674" value="674" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_gmut_coef00" range="0~65535" addr="0x3831" mask="15:0" dst="U" desc="reg_gmut_coef00 : // unsigned , default = 1285" default="1285" value="1285" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_gmut_coef10" range="0~65535" addr="0x3832" mask="31:16" dst="U" desc="reg_gmut_coef10 : // unsigned , default = 142" default="142" value="142" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_gmut_coef02" range="0~65535" addr="0x3832" mask="15:0" dst="U" desc="reg_gmut_coef02 : // unsigned , default = 89" default="89" value="89" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_gmut_coef12" range="0~65535" addr="0x3833" mask="31:16" dst="U" desc="reg_gmut_coef12 : // unsigned , default = 23" default="23" value="23" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_gmut_coef11" range="0~65535" addr="0x3833" mask="15:0" dst="U" desc="reg_gmut_coef11 : // unsigned , default = 1883" default="1883" value="1883" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_gmut_coef21" range="0~65535" addr="0x3834" mask="31:16" dst="U" desc="reg_gmut_coef21 : // unsigned , default = 180" default="180" value="180" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_gmut_coef20" range="0~65535" addr="0x3834" mask="15:0" dst="U" desc="reg_gmut_coef20 : // unsigned , default = 34" default="34" value="34" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="reg_gmut_coef22" range="0~65535" addr="0x3835" mask="15:0" dst="U" desc="reg_gmut_coef22 : // unsigned , default = 1834" default="1834" value="1834" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="vblank_num_oetf" range="0~255" addr="0x3836" mask="31:24" dst="U" desc="vblank_num_oetf : // unsigned , default = 4" default="4" value="4" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="hblank_num_oetf" range="0~255" addr="0x3836" mask="23:16" dst="U" desc="hblank_num_oetf : // unsigned , default = 4" default="4" value="4" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="vblank_num_eotf" range="0~255" addr="0x3836" mask="15:8" dst="U" desc="vblank_num_eotf : // unsigned , default = 10" default="10" value="10" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="hblank_num_eotf" range="0~255" addr="0x3836" mask="7:0" dst="U" desc="hblank_num_eotf : // unsigned , default = 10" default="10" value="10" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="vblank_num_cgain" range="0~255" addr="0x3837" mask="31:24" dst="U" desc="vblank_num_cgain : // unsigned , default = 10" default="10" value="10" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="hblank_num_cgain" range="0~255" addr="0x3837" mask="23:16" dst="U" desc="hblank_num_cgain : // unsigned , default = 10" default="10" value="10" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="vblank_num_gmut" range="0~255" addr="0x3837" mask="15:8" dst="U" desc="vblank_num_gmut : // unsigned , default = 11" default="11" value="11" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="hblank_num_gmut" range="0~255" addr="0x3837" mask="7:0" dst="U" desc="hblank_num_gmut : // unsigned , default = 11" default="11" value="11" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="vblank_num_adps" range="0~255" addr="0x3838" mask="31:24" dst="U" desc="vblank_num_adps : // unsigned , default = 22" default="22" value="22" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="hblank_num_adps" range="0~255" addr="0x3838" mask="23:16" dst="U" desc="hblank_num_adps : // unsigned , default = 2" default="2" value="2" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="vblank_num_uv" range="0~255" addr="0x3838" mask="15:8" dst="U" desc="vblank_num_uv : // unsigned , default = 4" default="4" value="4" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="hblank_num_uv" range="0~255" addr="0x3838" mask="7:0" dst="U" desc="hblank_num_uv : // unsigned , default = 4" default="4" value="4" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="proc_win_h_ed" range="0~8191" addr="0x3839" mask="28:16" dst="U" desc="proc_win_h_ed : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="proc_win_h_st" range="0~8191" addr="0x3839" mask="12:0" dst="U" desc="proc_win_h_st : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="proc_win_gmut_en" range="0~1" addr="0x383A" mask="31:31" dst="U" desc="proc_win_gmut_en : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="proc_win_adps_en" range="0~1" addr="0x383A" mask="30:30" dst="U" desc="proc_win_adps_en : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="proc_win_cgain_en" range="0~1" addr="0x383A" mask="29:29" dst="U" desc="proc_win_cgain_en : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="proc_win_v_ed" range="0~8191" addr="0x383A" mask="28:16" dst="U" desc="proc_win_v_ed : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="proc_win_v_st" range="0~8191" addr="0x383A" mask="12:0" dst="U" desc="proc_win_v_st : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="matrix_gclk_ctrl" range="0~3" addr="0x383B" mask="5:4" dst="U" desc="matrix_gclk_ctrl : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="enable_sync_sel" range="0~1" addr="0x383B" mask="1:1" dst="U" desc="enable_sync_sel : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="matrix_conv_en" range="0~1" addr="0x383B" mask="0:0" dst="U" desc="matrix_conv_en : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="slider" name="matrix_gclk_ctrl" range="0~3" addr="0x383C" mask="5:4" dst="U" desc="matrix_gclk_ctrl : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="enable_sync_sel" range="0~1" addr="0x383C" mask="1:1" dst="U" desc="enable_sync_sel : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+<Control ui_type="checkbox" name="matrix_conv_en" range="0~1" addr="0x383C" mask="0:0" dst="U" desc="matrix_conv_en : // unsigned , default = 0" default="0" value="0" cmd="common:2,0xff900000"/>
+</Page>
+<Page tab_title="HDR_PARAMS2" layout="40x4">
+<Control ui_type="slider" name="tmo_en" range="0~4" addr="0x0" mask="17:17" dst="U" desc="" default="2" value="2" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="highlight" range="0~2048" addr="0x1" mask="20:18" dst="U" desc="" default="832" value="832" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="hist_th" range="0~1024" addr="0x2" mask="20:18" dst="U" desc="" default="110" value="110" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="light_th" range="0~1024" addr="0x3" mask="20:18" dst="U" desc="" default="120" value="120" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="highlight_th1" range="0~256" addr="0x4" mask="20:18" dst="U" desc="" default="70" value="70" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="highlight_th2" range="0~256" addr="0x5" mask="20:18" dst="U" desc="" default="65" value="65" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="display_e" range="0~1023" addr="0x6" mask="20:18" dst="U" desc="" default="630" value="630" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="middle_a" range="0~128" addr="0x7" mask="20:18" dst="U" desc="" default="80" value="80" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="middle_a_adj" range="0~1024" addr="0x8" mask="20:18" dst="U" desc="" default="300" value="300" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="middle_b" range="0~128" addr="0x9" mask="20:18" dst="U" desc="" default="27" value="27" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="middle_s" range="0~128" addr="0xa" mask="20:18" dst="U" desc="" default="64" value="64" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="max_th1" range="0~1024" addr="0xb" mask="20:18" dst="U" desc="" default="50" value="50" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="middle_th" range="0~1024" addr="0xc" mask="20:18" dst="U" desc="" default="500" value="500" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="thold1" range="0~1024" addr="0xd" mask="20:18" dst="U" desc="" default="300" value="300" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="thold2" range="0~1024" addr="0xe" mask="20:18" dst="U" desc="" default="40" value="40" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="thold3" range="0~1024" addr="0xf" mask="20:18" dst="U" desc="" default="100" value="100" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="thold4" range="0~1024" addr="0x10" mask="20:18" dst="U" desc="" default="250" value="250" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="max_th2" range="0~1024" addr="0x11" mask="20:18" dst="U" desc="" default="25" value="25" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="pnum_th" range="0~65536" addr="0x12" mask="20:18" dst="U" desc="" default="5000" value="5000" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="hl0" range="0~128" addr="0x13" mask="20:18" dst="U" desc="" default="40" value="40" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="hl1" range="0~128" addr="0x14" mask="20:18" dst="U" desc="" default="60" value="60" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="hl2" range="0~128" addr="0x15" mask="20:18" dst="U" desc="" default="80" value="80" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="hl3" range="0~128" addr="0x16" mask="20:18" dst="U" desc="" default="90" value="90" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="display_adj" range="0~128" addr="0x17" mask="20:18" dst="U" desc="" default="115" value="115" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="avg_th" range="0~1023" addr="0x18" mask="20:18" dst="U" desc="" default="10" value="10" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="avg_adj" range="0~255" addr="0x19" mask="20:18" dst="U" desc="" default="150" value="150" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="low_adj" range="0~128" addr="0x1a" mask="20:18" dst="U" desc="" default="30" value="30" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="high_en" range="0~3" addr="0x1b" mask="20:18" dst="U" desc="" default="2" value="2" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="high_adj1" range="0~128" addr="0x1c" mask="20:18" dst="U" desc="" default="13" value="13" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="high_adj2" range="0~128" addr="0x1d" mask="20:18" dst="U" desc="" default="30" value="30" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="high_maxdiff" range="0~128" addr="0x1e" mask="20:18" dst="U" desc="" default="64" value="64" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="high_mindiff" range="0~128" addr="0x1f" mask="20:18" dst="U" desc="" default="8" value="8" cmd="hdr_dbg:name"/>
+<Control ui_type="slider" name="alpha" range="0~256" addr="0x20" mask="20:18" dst="U" desc="" default="250" value="250" cmd="hdr_dbg:name"/>
+</Page>
+<Page tab_title="HDR_CHARTS" layout="35x4">
+<Control ui_type="graph" name="eotf:debug" range="" addr="0x100" mask="" dst="U" desc="" default="1032192,1032192,1032192,1032192,16384,16384,16384,16384,32768,32768,32768,32768,40960,40960,40960,49152,49152,73728,86016,94208,100352,104448,108544,112640,117760,123904,128000,133632,137728,141824,146944,150272,153344,157440,161536,165248,167808,170880,174208,177792,181056,183360,185792,188480,191552,194880,197536,199520,201696,204128,206688,209568,212640,214480,216336,218320,220464,222832,225360,228112,230248,231864,233608,235496,237544,239752,242136,244712,246628,248132,249748,251492,253364,255388,257564,259908,262290,263646,265106,266678,268366,270182,272134,274230,276486,278717,280017,281415,282915,284525,286255,288113,290107,292247,294545,295961,297284,298705,300229,301866,303622,305507,307530,309701,311664,312915,314257,315698,317246,318907,320690,322605,324662,326871,328461,329735,331104,332575,334155,335853,337679,339642,341752,344021,345263,346576,347989,349509,351145,352907,354805,356848,359050,360935,362214,363593,365080,366684,368414,370283,372300,374478,376832" value="1032192,1032192,1032192,1032192,16384,16384,16384,16384,32768,32768,32768,32768,40960,40960,40960,49152,49152,73728,86016,94208,100352,104448,108544,112640,117760,123904,128000,133632,137728,141824,146944,150272,153344,157440,161536,165248,167808,170880,174208,177792,181056,183360,185792,188480,191552,194880,197536,199520,201696,204128,206688,209568,212640,214480,216336,218320,220464,222832,225360,228112,230248,231864,233608,235496,237544,239752,242136,244712,246628,248132,249748,251492,253364,255388,257564,259908,262290,263646,265106,266678,268366,270182,272134,274230,276486,278717,280017,281415,282915,284525,286255,288113,290107,292247,294545,295961,297284,298705,300229,301866,303622,305507,307530,309701,311664,312915,314257,315698,317246,318907,320690,322605,324662,326871,328461,329735,331104,332575,334155,335853,337679,339642,341752,344021,345263,346576,347989,349509,351145,352907,354805,356848,359050,360935,362214,363593,365080,366684,368414,370283,372300,374478,376832" cmd="hdr_rw:eo_y_lut_hdr_sdr_tool"/>
+<Control ui_type="graph" name="ootf:debug" range="" addr="0x101" mask="" dst="U" desc="" default="1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1596,1590,1581,1572,1562,1553,1536,1519,1502,1485,1468,1449,1431,1412,1377,1345,1319,1299,1260,1170,1092,1023,910,819,744,682,630,585,546,511,455,409,372,341,315,292,273,255,227,204,186,170,157,146,136,127,120,113,107,102,97,93,89,85,81,78,75,73,70,68,66,64" value="1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1596,1590,1581,1572,1562,1553,1536,1519,1502,1485,1468,1449,1431,1412,1377,1345,1319,1299,1260,1170,1092,1023,910,819,744,682,630,585,546,511,455,409,372,341,315,292,273,255,227,204,186,170,157,146,136,127,120,113,107,102,97,93,89,85,81,78,75,73,70,68,66,64" cmd="hdr_rw:oo_y_lut_hdr_sdr_tool"/>
+<Control ui_type="graph" name="oetf:debug" range="" addr="0x102" mask="" dst="U" desc="" default="1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1596,1590,1581,1572,1562,1553,1536,1519,1502,1485,1468,1449,1431,1412,1377,1345,1319,1299,1260,1170,1092,1023,910,819,744,682,630,585,546,511,455,409,372,341,315,292,273,255,227,204,186,170,157,146,136,127,120,113,107,102,97,93,89,85,81,78,75,73,70,68,66,64" value="1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1600,1596,1590,1581,1572,1562,1553,1536,1519,1502,1485,1468,1449,1431,1412,1377,1345,1319,1299,1260,1170,1092,1023,910,819,744,682,630,585,546,511,455,409,372,341,315,292,273,255,227,204,186,170,157,146,136,127,120,113,107,102,97,93,89,85,81,78,75,73,70,68,66,64" cmd="hdr_rw:oe_y_lut_hdr_sdr_tool"/>
+<Control ui_type="graph" name="gamut:debug" range="" addr="0x103" mask="" dst="U" desc="" default="425,-150,-18,-31,290,-2,-4,-25,286" value="425,-150,-18,-31,290,-2,-4,-25,286" cmd="hdr_rw:hdr_gamut_tool"/>
+<Control ui_type="graph" name="in_mtx:debug" range="" addr="0x104" mask="" dst="U" desc="" default="1024,0,0,0,1024,0,0,0,1024" value="1024,0,0,0,1024,0,0,0,1024" cmd="hdr_rw:hdr_in_mtx_tool"/>
+<Control ui_type="graph" name="out_mtx:debug" range="" addr="0x105" mask="" dst="U" desc="" default="1024,0,0,0,1024,0,0,0,1024" value="1024,0,0,0,1024,0,0,0,1024" cmd="hdr_rw:hdr_out_mtx_tool"/>
+</Page>
+</Group>
+</Form>
+

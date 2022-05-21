@@ -25,7 +25,7 @@
 <Control ui_type="slider" name="ACD_REG_54[15:8]" sig="1537" range="0~255" addr="0x154" mask="15:8" dst="U" desc="reg_k6_inphase2d" default="16" value="16" cmd="common:2,0xff654000"/>
 <Control ui_type="slider" name="ACD_REG_54[23:16]" sig="1537" range="0~255" addr="0x154" mask="23:16" dst="U" desc="reg_k7_oophase_n" default="64" value="64" cmd="common:2,0xff654000"/>
 <Control ui_type="slider" name="ACD_REG_54[31:24]" sig="1537" range="0~255" addr="0x154" mask="31:24" dst="U" desc="reg_k8_oophase_b" default="0" value="0" cmd="common:2,0xff654000"/>
-<Control ui_type="slider" name="ACD_REG_55[9:0]" sig="1537" range="0~1023" addr="0x155" mask="9:0" dst="U" desc="reg_hcfd_mtn_th" default="12" value="12" cmd="common:2,0xff654000"/>
+<Control ui_type="slider" name="ACD_REG_55[9:0]" sig="1537" range="0~1023" addr="0x155" mask="9:0" dst="U" desc="reg_hcfd_mtn_th" default="8" value="8" cmd="common:2,0xff654000"/>
 <Control ui_type="slider" name="ACD_REG_55[21:12]" sig="1537" range="0~1023" addr="0x155" mask="21:12" dst="U" desc="reg_mainpath_mtn_th" default="1" value="1" cmd="common:2,0xff654000"/>
 <Control ui_type="slider" name="ACD_REG_55[23]" sig="1537" range="0~1" addr="0x155" mask="23:23" dst="U" desc="reg_md2_inp2d_min" default="1" value="1" cmd="common:2,0xff654000"/>
 <Control ui_type="slider" name="ACD_REG_55[22]" sig="1537" range="0~1" addr="0x155" mask="22:22" dst="U" desc="reg_md2_hcfd_txt3d_inp2d_min" default="0" value="0" cmd="common:2,0xff654000"/>
@@ -44,6 +44,11 @@
 <Control ui_type="slider" name="ACD_REG_58[11:8]" sig="1537" range="0~15" addr="0x158" mask="11:8" dst="U" desc="reg_f2_still_th" default="1" value="1" cmd="common:2,0xff654000"/>
 <Control ui_type="slider" name="ACD_REG_58[7:4]" sig="1537" range="0~15" addr="0x158" mask="7:4" dst="U" desc="reg_f1_still_th" default="1" value="1" cmd="common:2,0xff654000"/>
 <Control ui_type="slider" name="ACD_REG_58[3:0]" sig="1537" range="0~15" addr="0x158" mask="3:0" dst="U" desc="reg_f0_still_th" default="1" value="1" cmd="common:2,0xff654000"/>
+<Control ui_type="slider" name="ACD_REG_59[3:0]" sig="1537" range="0~15" addr="0x159" mask="3:0" dst="U" desc="0x59 bit 0~3" default="2" value="2" cmd="common:2,0xff654000"/>
+<Control ui_type="slider" name="ACD_REG_59[7:4]" sig="1537" range="0~15" addr="0x159" mask="7:4" dst="U" desc="0x59 bit 4~7" default="2" value="2" cmd="common:2,0xff654000"/>
+<Control ui_type="slider" name="ACD_REG_59[11:8]" sig="1537" range="0~15" addr="0x159" mask="11:8" dst="U" desc="0x59 bit 8~11" default="2" value="2" cmd="common:2,0xff654000"/>
+<Control ui_type="slider" name="ACD_REG_59[15:12]" sig="1537" range="0~15" addr="0x159" mask="15:12" dst="U" desc="0x59 bit 12~15" default="5" value="5" cmd="common:2,0xff654000"/>
+<Control ui_type="slider" name="ACD_REG_59[19:16]" sig="1537" range="0~15" addr="0x159" mask="19:16" dst="U" desc="0x59 bit 16~19" default="2" value="2" cmd="common:2,0xff654000"/>
 <Control ui_type="slider" name="ACD_REG_64[31:24]" sig="1537" range="0~255" addr="0x164" mask="31:24" dst="U" desc="reg_k4_ip_err" default="16" value="16" cmd="common:2,0xff654000"/>
 <Control ui_type="slider" name="ACD_REG_64[23:16]" sig="1537" range="0~255" addr="0x164" mask="23:16" dst="U" desc="reg_k3_core_ip" default="16" value="16" cmd="common:2,0xff654000"/>
 <Control ui_type="slider" name="ACD_REG_64[15:8]" sig="1537" range="0~255" addr="0x164" mask="15:8" dst="U" desc="reg_k2_lp_err" default="16" value="16" cmd="common:2,0xff654000"/>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Form name="Sharpness_0_ATV_PAL" platform="txlx" commands="">
-<Group num="0"  val="0">
+<Group num="0" val="0">
 <Page tab_title="Sharpness Top" layout="30x4">
 <Control ui_type="checkbox" name="reg_pk_en" range="0~1" addr=" 0x5027" mask="1:1" dst="U" desc="reg_pk_en : . unsigned  , default = 1" default="1" value="1" cmd="common:2,0xff900000"/>
 <Control ui_type="checkbox" name="reg_nr_en" range="0~1" addr=" 0x5027" mask="0:0" dst="U" desc="reg_nr_en : . unsigned  , default = 1" default="0" value="0" cmd="common:2,0xff900000"/>
@@ -3505,3 +3505,4 @@
 </Page>
 </Group>
 </Form>
+

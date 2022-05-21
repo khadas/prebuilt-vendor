@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Form name="SmoothPlus_HDMI_SD_I" platform="txlx" commands="">
-<Group num="0"  val="">
+<Group num="0" val="">
 <Page tab_title="DS_pre" layout="2x4">
 <Control ui_type="readonly" name="reg_grd_path:debug" range="0~1" addr="0x4a00" mask="4:4" dst="U" desc="reg_grd_path : // unsigned ,RW, default = 0input selection of grid build, 0:DS input, 1: Ori input" default="0" value="0" cmd="common:2,0xff900000"/>
 <Control ui_type="readonly" name="reg_bit_in:debug" range="0~15" addr="0x4a00" mask="3:0" dst="U" desc="reg_bit_in : // unsigned ,RW, default = 1010bit or 12bit source input bit-width" default="10" value="10" cmd="common:2,0xff900000"/>

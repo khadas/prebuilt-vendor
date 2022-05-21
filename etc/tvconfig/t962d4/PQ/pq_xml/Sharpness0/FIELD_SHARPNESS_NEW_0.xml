@@ -136,7 +136,6 @@
 <Control type="sig" name="TVIN_SIG_FMT_NULL2" value="5" />
 <Control type="trans" name="TVIN_TFMT0_2D" value="0" />
 <Control type="trans" name="TVIN_TFMT0_3D" value="1" />
-
 </Page>
 </Group>
 </Form>
